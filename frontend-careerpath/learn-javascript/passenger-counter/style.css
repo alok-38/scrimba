@@ -34,6 +34,13 @@ h1 {
   z-index: 2;
 }
 
+p {
+  color: rgb(240, 57, 57);
+  font-size: 5em;
+  margin-top: 0;
+  text-wrap: wrap;
+}
+
 .blink {
   animation: blink 1s step-start infinite;
   color: orange;
@@ -53,7 +60,7 @@ div {
 
 .count {
   text-align: center;
-  color: red;
+  color: rgb(240, 57, 57);
   font-size: 9em;
   margin-bottom: 2.5rem;
 }
