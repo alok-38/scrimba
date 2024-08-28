@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  font: inherit;
+  background-image: url("./images/torshov-image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  background-color: #1d3557;
+  padding: 10px 45px;
+  border-radius: 15px;
+}
+
+header p {
+  font-size: 1.25rem;
+  color: #fff;
+  max-width: 500px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  background-color: #457B9D;
+  padding: 10px 45px;
+  text-align: center;
+}
+
+.activities {
+  background-color: #f1faee;
+  padding: 25px 0 50px 0;
+}
+
+h2 {
+  text-align: center;
+  margin: 30px auto 50px auto;
+  color: #1d3557;
+  font-size: 2.5rem;
+}
+
+h4 {
+  color: #1d3557;
+  font-size: 1.5rem;
+}
+
+.flex-container {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.5;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.flex-container div {
+  flex: 1 1 calc(33% - 40px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.3s ease;
+  padding: 25px 0 25px 0;
+}
+
+.flex-container div:hover {
+  transform: translateY(-10px);
+}
+
+.flex-container img {
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+.flex-container div h4 {
+  margin: 15px auto 15px auto;
+}
+
+.flex-container div p {
+  width: 60%;
+  margin: auto;
+}
+
+/* guide */
+.guide {
+  width: 50%;
+  margin: 50px auto;
+}
+
+.guide-container {
+  display: flex;
+  background-color: aliceblue;
+}
