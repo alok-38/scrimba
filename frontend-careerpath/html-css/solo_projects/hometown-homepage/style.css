@@ -35,7 +35,7 @@ header p {
   color: #fff;
   max-width: 500px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  background-color: #457B9D;
+  background-color: #457b9d;
   padding: 10px 45px;
   text-align: center;
 }
@@ -105,4 +105,35 @@ h4 {
 .guide-container {
   display: flex;
   background-color: aliceblue;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.guide-container div {
+  padding: 20px;
+}
+
+.guide-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.guide-container h3 {
+  margin-top: 0;
+}
+
+.guide-container p {
+  margin: 10px 0;
+}
+
+.your-guide {
+  margin-top: 25px;
+}
+
+.your-guide h3 {
+  font-size: 1.5rem;
+}
+
+.your-guide p{
+  line-height: 1.5;
 }
