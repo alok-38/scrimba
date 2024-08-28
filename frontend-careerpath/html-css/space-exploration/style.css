@@ -1,0 +1,60 @@
+html,
+body {
+  min-height: 100vh;
+}
+body {
+  font-family: "Space Mono", monospace;
+  margin: 0;
+}
+
+header {
+  background-image: url("./images/galaxy.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style for the <a> element */
+a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the SVG inside the <a> */
+a svg {
+  fill: rgb(0, 98, 255);
+  width: 250px;
+}
+
+h1 {
+  color: aliceblue;
+  font-size: 2.5rem;
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333333; /* Darker background on hover */
+}
+
+footer {
+  text-align: center;
+  color: rgb(0, 98, 255);
+}
