@@ -5,16 +5,17 @@ const paraEl = document.querySelector("p");
 
 let initialPassengerCount = 0;
 
-const incrementCount = () => {
-  spanEl.textContent = ++initialPassengerCount;
+// Function to increment the passenger count and update the displayed count
+const incrementPassengerCount = () => {
+  initialPassengerCount++;
+  spanEl.innerText = initialPassengerCount;
 };
 
-incrementBtnEl.addEventListener("click", incrementCount);
-
-const saveCount = () => {
-  initialPassengerCount = 0;
-  paraEl.textContent += initialPassengerCount + "-" + "";
-  spanEl.textContent = initialPassengerCount;
+// Function to save the current passenger count to the previous entries
+const savePassengerCount = () => {
+  paraEl.innerText += initialPassengerCount + "-" + " ";
 };
 
-saveBtnEl.addEventListener("click", saveCount);
+// Event listeners
+incrementBtnEl.addEventListener("click", incrementPassengerCount);
+saveBtnEl.addEventListener("click", savePassengerCount);
