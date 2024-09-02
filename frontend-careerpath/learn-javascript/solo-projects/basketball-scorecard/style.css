@@ -45,6 +45,7 @@ h1 {
   width: 155px;
   font-family: "digital-clock-font";
   border-radius: 5px;
+  margin-bottom: 15px;
 }
 
 .display > div > div {
@@ -56,6 +57,20 @@ h1 {
   font-size: 6.5em;
 }
 
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2px;
+}
+
 .buttons > button {
   font-family: "digital-clock-font";
+  padding: 1.5em;
+  height: 35px;
+  width: 40px;
+  cursor: pointer;
+  border-radius: 2.5px;
+  color: #9aabd8;
+  background: transparent;
+  border: 2px solid #9aabd8;
 }
