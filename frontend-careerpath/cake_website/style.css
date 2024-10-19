@@ -10,6 +10,7 @@ body {
   background-color: var(--bg-color);
   font-family: sans-serif;
   color: var(--text-color);
+  overflow: hidden;
 }
 
 section {
@@ -59,4 +60,19 @@ ol li {
   line-height: 1.2;
   margin-bottom: 1em;
   margin-left: 1.5%;
+}
+
+/* Move the p element accross the screen with this basic animation */
+p {
+  animation: moveAcross 15s linear infinite;
+  position: relative;
+}
+
+@keyframes moveAcross {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 100%;
+  }
 }
