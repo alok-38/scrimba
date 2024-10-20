@@ -26,19 +26,32 @@ button {
   border: none;
   padding: 15px 45px;
   cursor: pointer;
-  background-color: #50c878;
-  color: #444444;
   border-radius: 3.5px;
   transition: transform 0.1s ease;
   margin-top: 15px;
 }
 
-button:hover,
-button:focus {
+#increment-btn {
+  background-color: #50c878;
+  color: #444444;
+}
+
+#increment-btn:hover,
+#increment-btn:focus {
   background-color: #66d9a5;
 }
 
 button:active {
   transform: scale(0.95);
   box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#save-btn {
+  background-color: #3b5998;
+  color: #ffffff;
+}
+
+#save-btn:hover,
+#save-btn:focus {
+  background-color: #4b77be;
 }
