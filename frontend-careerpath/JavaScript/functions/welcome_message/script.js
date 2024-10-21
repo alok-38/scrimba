@@ -5,5 +5,13 @@
 
 // Render the welcome message using welcomeEl.innerText
 
-const welcomeEl = document.getElementById('welcome-el');
+const welcomeEl = document.getElementById("welcome-el");
 
+const myName = "Alok";
+const greeting = "Welcome";
+
+const greetings = () => {
+  welcomeEl.textContent = `${greeting} ${myName}`;
+};
+
+greetings();
