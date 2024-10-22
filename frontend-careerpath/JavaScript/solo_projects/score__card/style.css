@@ -12,6 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 70vh;
+  background-color: #f3f4f6;
 }
 
 main {
@@ -80,6 +81,7 @@ section {
   width: 45px;
   height: 45px;
   transition: background 0.3s, color 0.3s, border-color 0.3s;
+  font-family: "Cursed Timer ULiL", sans-serif;
 }
 
 .buttons button:hover {
