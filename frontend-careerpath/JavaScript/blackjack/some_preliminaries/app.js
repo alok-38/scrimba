@@ -3,7 +3,13 @@
 
 // 2. Create a variable, sum, and set it to the sum of the two cards
 
-const firstCard = 5;
+const firstCard = 11;
 const secondCard = 9;
 
 const sum = firstCard + secondCard;
+
+if (sum <= 21) {
+  console.log("You won!");
+} else {
+  console.log("You lost.");
+}
