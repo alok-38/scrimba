@@ -5,10 +5,34 @@ main {
   background-color: #1b244a;
   max-width: 724px;
   height: 385px;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
 }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
+  gap: 100px;
 }
+
+.board {
+  background-color: #080001;
+  height: 120px;
+  width: 155px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.display {
+  font-size: 90px;
+  color: red;
+}
+
