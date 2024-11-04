@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Bubblegum+Sans&display=swap");
+
+:root {
+  --bg-color: #ecf2ff;
+  --text-color: #2b283a;
+  --title-color: #4a4e74;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: sans-serif;
+  color: var(--text-color);
+  overflow: hidden;
+}
+
+section {
+  width: 90%;
+  margin: 0 auto;
+}
+
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  font-family: "Bubblegum Sans";
+  text-align: center;
+}
+
+h1 {
+  color: var(--title-color);
+  font-size: 3em;
+}
+
+.fireworks {
+  text-align: center;
+  font-size: 4em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 70px;
+}
+
+.grid li {
+  list-style-type: none;
+  font-size: 3em;
+  justify-self: center;
+}
+
+h3 {
+  font-size: 2.5em;
+}
+
+ol li {
+  line-height: 1.2;
+  margin-bottom: 1em;
+  margin-left: 1.5%;
+}
+
+/* Move the p element accross the screen with this basic animation */
+p {
+  animation: moveAcross 15s linear infinite;
+  position: relative;
+}
+
+@keyframes moveAcross {
+  0% {
+    left: -10%;
+  }
+  100% {
+    left: 100%;
+  }
+}
