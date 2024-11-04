@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+img {
+  display: block;
+  height: 150px;
+  width: 150px;
+  border-radius: 15px;
+  image-resolution: 500dpi;
+  image-rendering: auto;
+}
+
+main {
+  background-color: #ffffff;
+  max-width: 350px;
+  margin: 50px auto;
+  padding: 15px 15px 50px 15px;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 15px;
+}
+
+ul li {
+  padding-left: 25px;
+}
+
+button {
+  display: block;
+}
+
+h1 {
+  margin: 15px 0 15px 0;
+}
+
+h2 {
+  margin: 0 0 15px 0;
+}
+
+footer p,
+input {
+  margin-bottom: 5px;
+}
+
+input,
+button {
+  padding: 7px 35px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: unset;
+  background: transparent;
+}
+
+button {
+	text-align: center;
+}
