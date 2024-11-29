@@ -1,0 +1,70 @@
+/* Complete the CSS styling according to the provided design */
+
+body {
+    background-image: url('./images/table.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+h1 {
+    color: goldenrod;
+    font-size: 4rem;
+}
+
+p {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+#message-el {
+    font-size: 2.5rem;
+}
+
+main {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    color: #016f32;
+    width: 200px;
+    background-color: goldenrod;
+    outline: none;
+    border: none;
+    padding: 15px 45px;
+    cursor: pointer;
+    border-radius: 2.75px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: darkgoldenrod;
+    /* Change to a darker shade on hover */
+    transform: scale(1.05);
+    /* Slightly enlarge the button */
+}
+
+button:focus {
+    outline: 2px solid #016f32;
+    /* Add a green outline on focus */
+    outline-offset: 4px;
+    /* Space between the button and outline */
+}
+
+button:active {
+    background-color: #b87a28;
+    /* Darken color when the button is pressed */
+    transform: scale(0.98);
+    /* Slightly shrink the button when pressed */
+}
