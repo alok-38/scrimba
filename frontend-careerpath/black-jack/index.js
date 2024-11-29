@@ -1,15 +1,21 @@
-// Check if the person is elegible for a birthday card from the King! (100)
+let firstCard = 10
+let secondCard = 11
+let sum = firstCard + secondCard + 4
+let hasBlackJack = false
+let isAlive = true
+// 1. Declare a variable called message and assign its value to an empty string
+let message = "";
 
-let age = 100
-
-// if less than 100    -> "Not elegible"
-// else if exactly 100 -> "Here is your birthday card from the King!"
-// else                -> "Not elegible, you have already gotten one"
-
-if (age < 100) {
-    console.log("Not elegible");
-} else if (age === 100) {
-    console.log("Here is your birthday card from the King!");
+// 2. Reassign the message variable to the string we're logging out
+if (sum <= 20) {
+    console.log("Do you want to draw a new card? 🙂")
+} else if (sum === 21) {
+    console.log("Wohoo! You've got Blackjack! 🥳")
+    hasBlackJack = true
 } else {
-    console.log("Not elegible, you have already gotten one");
+    console.log("You're out of the game! 😭")
+    isAlive = false
 }
+
+// 3. Log it out!
+console.log(hasBlackJack);
