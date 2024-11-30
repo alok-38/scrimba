@@ -1,8 +1,7 @@
 let firstCard = 10;
 let secondCard = 4;
-// ordered list of items
-let cards = [firstCard, secondCard];
-let sum = firstCard + secondCard;
+let cards = [];  // Initialize the cards array as empty
+let sum = 0;     // Initialize sum as 0
 let hasBlackJack = false;
 let isAlive = true;
 let message = "";
@@ -18,6 +17,11 @@ let cardsEl = document.getElementById('cards-el');
 
 // Create a new function called startGame() that calls renderGame()
 const startGame = () => {
+    // Reset values at the start of a new game
+    cards = [firstCard, secondCard];  // Set cards to the initial two cards
+    sum = firstCard + secondCard;     // Set sum to the sum of the initial two cards
+    isAlive = true;                   // Reset the game state to "alive"
+    hasBlackJack = false;             // Reset Blackjack state
     renderGame();
 }
 
@@ -27,7 +31,7 @@ const renderGame = () => {
     sumEl.textContent = `Sum: ${sum}`;
 
     // Render the cards -> Cards: 10 4
-    cardsEl.textContent = "Cards: " + cards[0] + "," + cards[1];
+    cardsEl.textContent = "Cards: " + cards.join(", ");
 
     // Determine the game status
     if (sum <= 20) {
@@ -46,16 +50,14 @@ const renderGame = () => {
 
 // Function to draw a new card
 const newCard = () => {
-    console.log("Drawing a new card from deck");
-
-    // Generate a random card between 2 and 11
-    let card = Math.floor(Math.random() * 10) + 2; // Random number from 2 to 11
-
-    // Add the new card to the sum
-    sum += card;
-
-    // Update the sum and card display
-    renderGame();
+    if (isAlive && !hasBlackJack) {  // Prevent drawing cards if the game is over
+        // Generate a random card value between 2 and 11
+        let card = Math.floor(Math.random() * 10) + 2;
+        sum += card;
+        // Push the new card to the cards array
+        cards.push(card);
+        renderGame();
+    }
 }
 
 // Add event listeners to buttons
