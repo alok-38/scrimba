@@ -1,4 +1,9 @@
 /* Complete the CSS styling according to the provided design */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     background-image: url('./images/table.png');
@@ -33,6 +38,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 25px;
 }
 
 button {
@@ -68,10 +74,6 @@ button:active {
     /* Darken color when the button is pressed */
     transform: scale(0.98);
     /* Slightly shrink the button when pressed */
-}
-
-#new-btn {
-    margin-top: 2rem;
 }
 
 @media only screen and (min-device-width: 480px){
