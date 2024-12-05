@@ -1,66 +1,116 @@
-let firstCard = 10;
-let secondCard = 11;
-let sum = firstCard + secondCard;
+let cards = [];
+let sum = 0;
 let hasBlackJack = false;
 
-// Reference to the paragraph elements
+// References to the elements
 let messageEl = document.getElementById("message-el");
 let cardsEl = document.getElementById("cards-el");
 let playerEl = document.getElementById("player-el");
 let sumEl = document.getElementById('sum-el');
 
-// 1. Create a variable called isAlive and assign it to true
+// Game status variables
 let isAlive = true;
-
-// 1. Declare a variable called message and assign its value to an empty string
 let message = "";
 
-// Create a new function called startGame() that calls renderGame()
-function startGame() {
-    renderGame()
+// Function to generate a random card value (2-11)
+function generateRandomCard() {
+    let cardValue = Math.floor(Math.random() * 13) + 1; // Random number between 1 and 13
+
+    // Map the values 11, 12, 13 to 10 (face cards)
+    if (cardValue > 10) {
+        return 10;
+    } else if (cardValue === 1) {
+        return 11; // Ace can be 11
+    } else {
+        return cardValue;
+    }
 }
 
+// Start game function
+function startGame() {
+    // Clear previous cards and sum
+    cards = [];
+    sum = 0;
+
+    // Draw two random cards
+    cards.push(generateRandomCard());
+    cards.push(generateRandomCard());
+
+    // Calculate sum
+    sum = cards[0] + cards[1];
+    renderGame();
+}
+
+// Render game function
 function renderGame() {
-    // Render the sum on the page using this format -> "Sum: 14"
+    // Update the sum
     sumEl.textContent = `Sum: ${sum}`;
 
-    // Render the cards drawn so far on the page
-    cardsEl.textContent = `Cards: ${firstCard}, ${secondCard}`;
+    // Use a for loop to render out all the cards in the cards array
+    let cardsText = "Cards: ";
+    for (let i = 0; i < cards.length; i++) {
+        cardsText += cards[i];
+        if (i < cards.length - 1) {
+            cardsText += ", "; // Add a comma if not the last card
+        }
+    }
+    cardsEl.textContent = cardsText;
 
+    // Check if the player is still alive and update message
     if (sum < 21) {
         message = "Do you want to draw another card?";
         messageEl.textContent = message;
     } else if (sum === 21) {
         message = "BlackJack!";
         messageEl.textContent = message;
-        console.log("Is the player alive? " + isAlive); // Player is still alive if they have a Blackjack
         hasBlackJack = true;
     } else {
         message = "You are out of the game.";
         messageEl.textContent = message;
-        console.log(message);
-        // Flip its value to false in the appropriate code block 
         isAlive = false;
-        console.log("Is the player alive? " + isAlive); // Player is out of the game, isAlive should be false
     }
 }
 
+// Function to draw a new card
+function drawNewCard() {
+    if (isAlive && !hasBlackJack) {
+        // Draw a new card
+        let card = generateRandomCard();
+        cards.push(card);
+        sum += card;
+        renderGame();
+    }
+}
+
+// Function for a new game
 function newGame() {
     isAlive = true;
     hasBlackJack = false;
 
-    // Clear the messages and render the initial state
+    // Reset the game variables
+    cards = [];
+    sum = 0;
+
+    // Draw two new cards
+    cards.push(generateRandomCard());
+    cards.push(generateRandomCard());
+
+    // Render the initial state
     messageEl.textContent = "Drawing a new card from the deck!";
-    cardsEl.textContent = `Cards: ${firstCard}, ${secondCard}`;
+    cardsEl.textContent = `Cards: ${cards.join(", ")}`;
     sumEl.textContent = `Sum: ${sum}`;
 }
 
 // Event listeners for buttons
 const startGameBtn = document.getElementById('start-btn');
 const newGameBtn = document.getElementById('new-btn');
+const drawCardBtn = document.getElementById('draw-btn');
 
-// Event listener to start the game
+// Start the game when the start button is clicked
 startGameBtn.addEventListener('click', startGame);
 
-// Event listener to start a new game
+// Start a new game when the new game button is clicked
 newGameBtn.addEventListener('click', newGame);
+
+// Draw a new card when the draw card button is clicked
+drawCardBtn.addEventListener('click', drawNewCard);
