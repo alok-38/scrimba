@@ -20,6 +20,10 @@ main {
     margin-top: 2.5rem;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
 button {
     background-color: #10B981;
     color: #ffffff;
@@ -31,6 +35,7 @@ button {
     width: 215px;
     letter-spacing: .05px;
     transition: all 0.2s ease;
+    margin: 1.5rem 0 0 0;
 }
 
 button:hover {
