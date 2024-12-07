@@ -1,31 +1,47 @@
+html,
 body {
     margin: 0;
-    padding: 10px;
+    padding: 0;
+    width: 100%;
+    /* Ensure body takes full width */
+    height: 100%;
+    /* Ensure body takes full height */
+    box-sizing: border-box;
+    /* Box sizing ensures padding doesn't break the layout */
     font-family: Arial, Helvetica, sans-serif;
 }
 
 main {
     width: 100%;
-    max-width: 600px;
+    /* Take full width */
+    min-width: 500px;
+    /* Ensure a minimum width of 500px */
     margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 input {
     display: block;
     width: 100%;
+    /* Input takes full width of its container */
     border: 2px solid #5f9341;
-    line-height: 1;
+    padding: 10px;
     font-size: 18px;
+    margin-bottom: 10px;
+    /* Space between input and button */
     box-sizing: border-box;
 }
 
 button {
-    margin-top: 5px;
-    font-weight: 600;
-    background-color: #5f9341;
-    border: none;
+    width: 100%;
+    /* Button takes full width of its container */
     height: 45px;
-    color: #ffffff;
+    background-color: #5f9341;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
 }
 
@@ -45,21 +61,19 @@ button:active {
     transform: scale(0.98);
 }
 
-input,
-button {
-    padding: 10px 45px;
-    outline: none;
-    cursor: pointer;
-}
-
-input:hover,
-input:focus {
+input:focus,
+input:hover {
     background-color: #babcb9;
 }
 
 @media only screen and (max-width: 640px) {
     main {
-        width: 100%;
         padding: 10px;
+        /* Reduce padding on smaller screens */
+    }
+
+    button {
+        height: 40px;
+        /* Slightly smaller button height on small screens */
     }
 }
