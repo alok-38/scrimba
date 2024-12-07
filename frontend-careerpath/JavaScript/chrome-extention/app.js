@@ -1,16 +1,14 @@
-let myLeads = ["www.awesomelead.com", "www.epiclead.com", "www.greatlead.com"];
+let myLeads = [];
+const inputEl = document.getElementById("input-el");
+const inputBtn = document.getElementById("input-btn");
 
-const buttonEl = document.getElementById('input-btn');
-const inputEl = document.getElementById('input-el');
-const ulEl = document.getElementById('ul-el');
+// Push the value from the inputEl into the myLeads array 
+// instead of the hard-coded "www.awesomeleads.com" value
+// Google -> "get value from input field javascript"
+const pushToMyLeads = () => {
+    let lead = inputEl.value;
+    myLeads.push(lead);
+    inputEl.value = "";
+}
 
-// Function to render the leads as an unordered list
-const renderLeads = () => {
-    for (let i = 0; i < myLeads.length; i++) {
-        const liEl = document.createElement("li");
-        liEl.textContent = myLeads[i];
-        ulEl.appendChild(liEl);
-    }
-};
-
-buttonEl.addEventListener('click', renderLeads);
+inputBtn.addEventListener('click', pushToMyLeads);
