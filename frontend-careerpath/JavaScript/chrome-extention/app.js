@@ -8,6 +8,10 @@ const inputBtn = document.getElementById("input-btn");
 const pushToMyLeads = () => {
     let lead = inputEl.value;
     myLeads.push(lead);
+    // Log out the items in the myLeads array using a for loop 
+    for (let count = 0; count < myLeads.length; count++) {
+        console.log(myLeads[count]);
+    }
     inputEl.value = "";
 }
 
