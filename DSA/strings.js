@@ -55,3 +55,16 @@ console.log(typeof (string_one));
 // String object to primitive
 const string_two = new String("2 + 2");
 console.log(eval(string_two.valueOf()));
+
+// Reversing strings
+let inputString = "Hello World";
+let reversedString = inputString.split("").reverse().join("");
+console.log(reversedString);
+
+// Concatenate the two strings together 
+const quoteStart = "Don't judge each day by the harvest you reap";
+const finalQuote = quoteStart;
+const section = document.querySelector('section');
+const paraEl = document.createElement('p');
+section.appendChild(paraEl);
+paraEl.textContent = finalQuote;
