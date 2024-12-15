@@ -8,6 +8,8 @@ const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage  // If there are leads in localStorage, restore them
     renderLeads()  // Render the leads list
+} else {
+    console.log("No leads in localStorage.")
 }
 
 // Event listener to add a new lead
@@ -17,6 +19,7 @@ inputBtn.addEventListener("click", function () {
         inputEl.value = "" // Clear the input field
         localStorage.setItem("myLeads", JSON.stringify(myLeads)) // Save the array to localStorage
         renderLeads() // Re-render the list
+        console.log("Lead added and saved:", inputEl.value);
     }
 })
 
