@@ -46,6 +46,27 @@ button {
     margin-bottom: 2rem;
     width: 48%;
     font-family: "Karla", serif;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #059669;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+button:active {
+    background-color: #047857;
+    transform: scale(0.98);
+}
+
+button:focus-visible {
+    outline: 2px solid #10B981;
 }
 
 h1 {
@@ -63,6 +84,7 @@ input {
     outline: none;
     border: none;
     font-family: "Karla", serif;
+    background-color: #273549;
 }
 
 hr {
