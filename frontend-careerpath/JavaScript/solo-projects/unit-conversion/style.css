@@ -10,6 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    font-family: "Inter", serif;
 }
 
 main {
@@ -50,6 +51,14 @@ button {
     display: flex;
     justify-content: center;
     margin: auto;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 42px;
+    align-items: center;
+    background-color: #FFFFFF;
+    font-family: "Inter", serif;
 }
 
 input {
@@ -57,5 +66,21 @@ input {
     color: #ffffff;
     width: 117px;
     height: 83px;
+    margin: auto;
     display: block;
+    border: 2px solid #B295FF;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    font-family: "Inter", serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 4rem;
+}
+
+h3 {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 2rem;
+    color: #ffffff;
 }
