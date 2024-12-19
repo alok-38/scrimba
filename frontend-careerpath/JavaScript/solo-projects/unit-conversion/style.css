@@ -61,6 +61,21 @@ button {
     font-family: "Inter", serif;
 }
 
+button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+button:focus {
+    border: 2px solid #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.7);
+}
+
+button:active {
+    background-color: #e0e0e0;
+    transform: scale(0.98);
+}
+
 input {
     background-color: #6943FF;
     color: #ffffff;
