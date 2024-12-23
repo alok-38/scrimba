@@ -1,14 +1,11 @@
-function reverseString(string) {
-    let stack = [];
-    for (char of string) {
-        stack.push(char);
-    }
-    let reversedString = [];
-    while (stack.length > 0) {
-        reversedString.push(stack.pop());
-    }
-    return reversedString.join("");
+// Using prompt to accept input
+let stringInput = prompt("Please enter some text:");
+
+let reversedString = "";
+
+// Loop through the string in reverse order
+for (let index = stringInput.length - 1; index >= 0; index--) {
+    reversedString += stringInput[index];
 }
 
-console.log(reverseString("alok"));
-console.log(reverseString("kishan"));
+console.log(reversedString);
