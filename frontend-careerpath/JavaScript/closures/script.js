@@ -8,4 +8,16 @@ function outerFunction() {
     return innerFunction;
 }
 
-outerFunction();
+const closureExample = outerFunction();
+closureExample();
+
+// Second example
+function print(params) {
+    console.log(params);
+}
+
+function greet(name, callback) {
+    callback("hello " + name)
+}
+
+greet("alok", print);
