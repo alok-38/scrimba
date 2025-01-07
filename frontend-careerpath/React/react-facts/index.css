@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+header {
+    background-color: #21222A;
+    padding: 2rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+nav a {
+    color: #61DAFB;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+main {
+    padding: 2.5rem;
+    height: 459px;
+    width: 550px;
+}
+
+main div {
+    display: flex;
+    gap: 25px;
+}
+
+main div img {
+    width: 251.77px;
+    height: 222.74px;
+    object-fit: cover;
+    padding-left: 25px;
+}
+
+h1 {
+    padding: 0 0 1.5rem 0;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+ul {
+    list-style-type: none;
+    /* Remove default bullets */
+    padding-left: 20px;
+}
+
+ul li {
+    color: #ffffff;
+    width: 100%;
+}
+
+li::before {
+    content: "•";
+    /* Unicode character for the bullet */
+    color: #61DAFB;
+    /* Bullet color */
+    font-size: 32px;
+    /* Size of the bullet */
+    margin-right: 10px;
+    /* Space between bullet and text */
+}
+
+main {
+    background-color: #282D35;
+}
