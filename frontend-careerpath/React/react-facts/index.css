@@ -33,26 +33,20 @@ nav a {
 main {
     padding: 2.5rem;
     height: 459px;
-    width: 550px;
-}
-
-main div {
+    width: 740px;
     display: flex;
-    gap: 25px;
+    background-image: url('./Group.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-main div img {
-    width: 251.77px;
-    height: 222.74px;
-    object-fit: cover;
-    padding-left: 25px;
-}
-
-h1 {
-    padding: 0 0 1.5rem 0;
+h3 {
     color: #ffffff;
     font-weight: 700;
-    font-size: 48px;
+    margin-bottom: .5rem;
+    padding-left: 0;
+    font-size: 30px;
 }
 
 ul {

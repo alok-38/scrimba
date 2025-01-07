@@ -14,10 +14,12 @@ function Header() {
 }
 
 function Main() {
+    const reasons = ['Fun', 'Interesting', 'Fast'];
+
     return (
         <main>
-            <h1>Fun facts about React</h1>
-            <div>
+            <div className="left">
+                <h3>Fun facts about React</h3>
                 <ul>
                     <li>Was first released in 2013</li>
                     <li>Was originally created by Jordan Walke</li>
@@ -25,11 +27,19 @@ function Main() {
                     <li>Is maintained by Meta</li>
                     <li>Powers thousands of enterprise apps, including mobile apps</li>
                 </ul>
-                <img src="./Group.png" alt="ReactJS logo" />
+            </div>
+            <div className="right">
+                <h3>Why am I excited to learn react</h3>
+                <ul>
+                    {reasons.map((item, index) => {
+                        return <li key={index}>{item}</li>; // Make sure to return JSX
+                    })}
+                </ul>
             </div>
         </main>
-    )
+    );
 }
+
 
 function App() {
     return (
