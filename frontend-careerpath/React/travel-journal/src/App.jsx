@@ -2,7 +2,7 @@ import Entry from "./components/Entry"
 
 const App = () => {
   return (
-    <div>
+    <div className="app">
       <Entry />
     </div>
   )
