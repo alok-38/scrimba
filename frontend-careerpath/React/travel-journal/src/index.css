@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 125px;
+    height: 168px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.marker {
+    width: 7px;
+    height: 9.55px;
+    object-fit: cover;
+}
+
+.map {
+    display: flex;
+}
+
+.map .flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.map div {
+    display: flex;
+}
+
+.locations div {
+    display: flex;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+}
