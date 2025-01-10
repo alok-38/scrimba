@@ -27,6 +27,12 @@ span {
     font-size: 64px;
 }
 
+h1 {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 h2 {
     /* margin: 50px auto; */
     font-size: 100px;
@@ -34,7 +40,6 @@ h2 {
 }
 
 span {
-    display: block;
     text-align: center;
 }
 

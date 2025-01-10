@@ -1,12 +1,19 @@
-const count = document.getElementById('count');
+const countEl = document.getElementById('count-el');
 const upBtn = document.getElementById('up');
+const saveEl = document.getElementById('save-el');
+const saveBtn = document.getElementById('save');
 
 let initialCount = 0;
 
-count.textContent = 0;
-
 const countPassengerUp = () => {
-    count.textContent = ++initialCount;
-}
+    countEl.textContent = ++initialCount;
+};
 
 upBtn.addEventListener('click', countPassengerUp);
+
+const savePassengerCount = () => {
+    // Always add the count followed by a comma and space
+    saveEl.textContent += initialCount + ", ";
+};
+
+saveBtn.addEventListener('click', savePassengerCount); 
