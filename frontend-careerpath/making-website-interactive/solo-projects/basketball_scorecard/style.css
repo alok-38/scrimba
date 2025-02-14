@@ -73,6 +73,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    background-color: #EEEEEE;
 }
 
 main {
@@ -81,6 +82,9 @@ main {
     max-width: 1150px;
     width: 100%;
     padding: 4rem 1.5rem;
+    flex-direction: column;
+    height: 385px;
+    position: absolute;
 }
 
 .section {
@@ -115,6 +119,34 @@ section {
     background: transparent;
     color: #9AABD8;
     border: 2px solid #9AABD8;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    transition: all 0.2s ease;
+}
+
+.buttons button:hover {
+    background-color: #9AABD8;
+    color: #EEEEEE;
+}
+
+.buttons button:active {
+    transform: scale(0.95);
+    /* Slightly shrink the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add shadow on press */
+}
+
+
+.buttons button span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: baseline;
 }
 
 
@@ -130,4 +162,37 @@ h2 {
     height: 120px;
     background-color: #080001;
     border-radius: 5px;
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    font-size: 90px;
+    text-align: center;
+    color: #F94F6D;
+}
+
+.new-game {
+    width: 50%;
+    margin: auto;
+    position: relative;
+    bottom: 45px;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: .75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    outline: unset;
+    border: unset;
+    background-color: #F94F6D;
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.new-game:hover {
+    background-color: #fd607d;
+}
+
+.new-game:active {
+    transform: scale(0.99);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
