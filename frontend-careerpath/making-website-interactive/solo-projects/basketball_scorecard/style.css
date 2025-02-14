@@ -78,14 +78,56 @@ body {
 main {
     background-color: #1B244A;
     display: flex;
+    max-width: 1150px;
+    width: 100%;
+    padding: 4rem 1.5rem;
 }
+
+.section {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 100%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.display {
+    margin: 1rem 0 1.5rem 0;
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.buttons button {
+    width: 45px;
+    height: 45px;
+    border: unset;
+    outline: unset;
+    border-radius: 5px;
+    cursor: pointer;
+    background: transparent;
+    color: #9AABD8;
+    border: 2px solid #9AABD8;
+}
+
 
 h2 {
     color: #EEEEEE;
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
 }
 
 .display {
     width: 155px;
     height: 120px;
     background-color: #080001;
+    border-radius: 5px;
 }
