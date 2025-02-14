@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E9F2EF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+}
+
+img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+button {
+    width: 150px;
+    border-radius: 50px;
+    outline: unset;
+    border: unset;
+    background: transparent;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    transition: all 0.2s ease;
+    border: 2px solid #999;
+}
+
+button:hover {
+    background-color: #CB031D;
+    color: #ffffff;
+    border: #000000 2px solid;
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 4px #999;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
