@@ -1,23 +1,19 @@
-/* 1. Use a more-intuitive box-sizing model */
+/* Global Resets */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* 2. Remove default margin */
 * {
     margin: 0;
 }
 
 body {
-    /* 3. Add accessible line-height */
     line-height: 1.5;
-    /* 4. Improve text rendering */
     -webkit-font-smoothing: antialiased;
 }
 
-/* 5. Improve media defaults */
 img,
 picture,
 video,
@@ -27,7 +23,6 @@ svg {
     max-width: 100%;
 }
 
-/* 6. Inherit fonts for form controls */
 input,
 button,
 textarea,
@@ -35,7 +30,6 @@ select {
     font: inherit;
 }
 
-/* 7. Avoid text overflows */
 p,
 h1,
 h2,
@@ -46,7 +40,6 @@ h6 {
     overflow-wrap: break-word;
 }
 
-/* 8. Improve line wrapping */
 p {
     text-wrap: pretty;
 }
@@ -60,14 +53,12 @@ h6 {
     text-wrap: balance;
 }
 
-/*
-    9. Create a root stacking context
-  */
 #root,
 #__next {
     isolation: isolate;
 }
 
+/* Body and Main Layout */
 body {
     display: flex;
     align-items: center;
@@ -79,30 +70,45 @@ body {
 main {
     background-color: #1B244A;
     display: flex;
+    flex-direction: column;
     max-width: 1150px;
     width: 100%;
     padding: 4rem 1.5rem;
-    flex-direction: column;
-    height: 385px;
-    position: absolute;
+    height: auto;
+    position: relative;
+    min-height: 385px;
+    border-radius: 10px;
 }
 
+/* Section Layout */
 .section {
     display: flex;
     justify-content: space-evenly;
     margin: auto;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 section {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
+/* Score Display */
 .display {
     margin: 1rem 0 1.5rem 0;
+    width: 155px;
+    height: 120px;
+    background-color: #080001;
+    border-radius: 5px;
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    font-size: 90px;
+    text-align: center;
+    color: #F94F6D;
 }
 
+/* Buttons Layout */
 .buttons {
     display: flex;
     width: 100%;
@@ -136,20 +142,16 @@ section {
 
 .buttons button:active {
     transform: scale(0.95);
-    /* Slightly shrink the button */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Add shadow on press */
 }
-
 
 .buttons button span {
     display: flex;
     align-items: center;
     justify-content: center;
-    vertical-align: baseline;
 }
 
-
+/* Heading Styles */
 h2 {
     color: #EEEEEE;
     text-align: center;
@@ -157,17 +159,7 @@ h2 {
     font-size: 40px;
 }
 
-.display {
-    width: 155px;
-    height: 120px;
-    background-color: #080001;
-    border-radius: 5px;
-    font-family: 'Cursed Timer ULiL', sans-serif;
-    font-size: 90px;
-    text-align: center;
-    color: #F94F6D;
-}
-
+/* New Game Button */
 .new-game {
     width: 50%;
     margin: auto;
@@ -195,4 +187,72 @@ h2 {
 .new-game:active {
     transform: scale(0.99);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 2rem;
+    }
+
+    .buttons button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .display {
+        font-size: 70px;
+        width: 130px;
+        height: 100px;
+    }
+
+    .new-game {
+        width: 100%;
+        height: 40px;
+        font-size: 16px;
+        top: 25px;
+    }
+
+    .section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 24px;
+    }
+
+    .display {
+        font-size: 60px;
+        width: 120px;
+        height: 90px;
+    }
+
+    .new-game {
+        width: 80%;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .buttons {
+        display: flex;
+    }
+
+    .buttons button {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
 }
