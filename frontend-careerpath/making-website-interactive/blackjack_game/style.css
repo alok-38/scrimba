@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('images/table.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    line-height: 1.5;
+}
+
+h1 {
+    color: goldenrod;
+    font-size: 3.75rem;
+}
+
+p {
+    color: #ffffff;
+    font-size: 1.75rem;
+}
