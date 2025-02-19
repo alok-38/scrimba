@@ -9,22 +9,62 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 main {
-    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
 }
 
 h1 {
+    font-weight: 700;
     color: goldenrod;
     font-size: 3.75rem;
+}
+
+#message-el {
+    font-style: italic;
 }
 
 p {
     color: #ffffff;
     font-size: 1.75rem;
+    font-weight: 600;
+}
+
+button {
+    color: #016f32;
+    width: 150px;
+    background: goldenrod;
+    outline: unset;
+    border: unset;
+    transition: background 0.3s, transform 0.1s;
+    /* Add smooth transitions for the effects */
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    padding: 1rem 1.5rem;
+}
+
+/* Hover effect */
+button:hover {
+    background: darkgoldenrod;
+    /* Darker background when hovered */
+    color: white;
+    /* Change text color on hover */
+}
+
+/* Press (active) effect */
+button:active {
+    transform: scale(0.98);
+    /* Slightly shrink the button on press */
+    background: #b8860b;
+    /* Darker goldenrod on press */
 }
