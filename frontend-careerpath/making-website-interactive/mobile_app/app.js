@@ -1,12 +1,19 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js"
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-database.js";
 
-const firebaseConfig = {};
+// Use the configuration from the window object
+const firebaseConfig = {
+    databaseURL: window.FIREBASE_CONFIG.databaseURL
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
+
+console.log(firebaseConfig.databaseURL);
 
 let myLeads = [];
-const inputel = document.getElementById('input-el');
+const inputEl = document.getElementById('input-el');
 const inputBtn = document.getElementById('input-btn');
 const ulEl = document.getElementById('ul-el');
 const deleteBtn = document.getElementById("delete-btn");
@@ -27,7 +34,7 @@ tabBtn.addEventListener("click", function () {
 });
 
 function render(leads) {
-    let listItems = ""
+    let listItems = "";
     for (let i = 0; i < leads.length; i++) {
         listItems += `
             <li>
@@ -35,7 +42,7 @@ function render(leads) {
                     ${leads[i]}
                 </a>
             </li>
-        `
+        `;
     }
     ulEl.innerHTML = listItems;
 }
@@ -51,4 +58,4 @@ inputBtn.addEventListener("click", function () {
     inputEl.value = "";
     localStorage.setItem("myLeads", JSON.stringify(myLeads));
     render(myLeads);
-})
+});
