@@ -18,7 +18,7 @@ main {
     background-color: #1F2937;
     max-width: 550px;
     width: 100%;
-    padding: 64px 62px;
+    padding: 100px 62px 100px;
 }
 
 header {
@@ -59,6 +59,7 @@ section:first-of-type {
     gap: 15px;
     width: 100%;
     margin: 2rem 0 2rem 0;
+    align-items: center;
 }
 
 /********** Range Input Styles **********/
@@ -130,9 +131,10 @@ input[type="range"]:focus::-moz-range-thumb {
 
 
 section:last-of-type {
-    border-top: 2px #2F3E53;
+    height: 2px;
     display: flex;
     position: absolute;
+    border-top: 2px solid #2F3E53;
 }
 
 .fas {
@@ -179,6 +181,7 @@ input {
     width: 211px;
     height: 39px;
     font-size: 24px;
-    padding-left: 35px;
     color: #55F991;
+    text-align: center;
+    margin-top: 2rem;
 }
