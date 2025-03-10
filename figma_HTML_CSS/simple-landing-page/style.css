@@ -107,3 +107,87 @@ section:last-of-type form button {
     height: 63px;
     font-size: 24px;
 }
+
+/* Media query for smartphones */
+@media (max-width: 600px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    section:first-of-type,
+    button {
+        margin-bottom: 2.5rem;
+    }
+
+    section:first-of-type div {
+        padding: 2rem;
+        height: 576px;
+        width: 100%;
+        margin: auto;
+    }
+
+    section:first-of-type div p,
+    section:first-of-type div h1 {
+        text-align: center;
+    }
+
+}
+
+/* Media query for tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    section:first-of-type div {
+        padding: 2rem;
+        height: 576px;
+        width: 100%;
+        margin: auto;
+    }
+
+    section:first-of-type div p,
+    section:first-of-type div h1 {
+        text-align: center;
+        width: 80%;
+    }
+
+    form div {
+        display: flex;
+        flex-direction: row;
+        margin-top: 3rem;
+        gap: 25px;
+    }
+
+    form div label {
+        display: inline;
+    }
+
+    form div input {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-top: 2rem;
+    }
+
+
+
+}
