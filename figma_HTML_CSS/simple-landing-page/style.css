@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1260px;
+    background: transparent;
+    background-color: #ffffff;
+    margin: auto;
+    height: 846px;
+}
+
+section:first-of-type {
+    background-image: url('Rectangle\ 1.png');
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section:last-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section:last-of-type form {
+    display: flex;
+    flex-direction: column;
+}
