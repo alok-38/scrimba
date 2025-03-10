@@ -1,0 +1,38 @@
+body {
+    background-color: #2d2e36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    background-color: #383845;
+    width: 729px;
+    height: 310px;
+    border-radius: 8px;
+    background-image: url('Rectangle\ 2.png');
+    background-size: 262px 250px;
+    background-repeat: no-repeat;
+    background-position: 25px 30px;
+    display: flex;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: 5%;
+    color: #ffffff;
+}
+
+
+img {
+    width: 20px;
+    height: 22px;
+    margin-top: 4.5%;
+    object-fit: cover;
+    cursor: pointer;
+}
