@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statements</title>
+</head>
+
+<body>
+    <script>
+        /**
+ * Price List
+ * Coffee $2
+ * Sandwiches $5
+ * Salad $4
+ * Lemon Cake $3
+*/
+
+        // For example: "You selected Salad. That will be $4"
+        function selectItem(item) {
+            let price = 0;
+            switch (item) {
+                case 'Coffee':
+                    console.log(`You selected Coffee. That will be ${price + 2}`);
+                    break;
+                case 'Sandwiches':
+                    console.log(`You selected Sandwiches. That will be ${price + 5}`);
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

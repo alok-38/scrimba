@@ -12,8 +12,9 @@
         // condition ? value_if_true : value_if_false;
         const exerciseTimeMins = 20;
         let message = "";
-        message = exerciseTimeMins < 30 ? "You need to try harder!" : "Doing good!";
+        message = exerciseTimeMins < 30 ? "You need to try harder!" : exerciseTimeMins < 60 ? "Doing good!" : "Great job!";
         console.log(message);
+
     </script>
 </body>
 
