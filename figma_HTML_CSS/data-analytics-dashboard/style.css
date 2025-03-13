@@ -94,6 +94,8 @@ nav {
     height: 664px;
     padding-top: 50px;
     padding-left: 50px;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
 }
 
 a {
@@ -152,3 +154,5 @@ main p {
     opacity: .8;
     margin-bottom: 2rem;
 }
+
+
