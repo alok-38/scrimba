@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    line-height: 1.5;
+    font-family: "Open Sans", sans-serif;
+    background-color: aliceblue;
+}
+
+main {
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.4;
+}
+
+header,
+section:last-of-type,
+.section-two {
+    background-color: #2e354f;
+    width: 100%;
+}
+
+header {
+    padding: 2.75rem;
+}
+
+header h1,
+section:last-of-type {
+    color: #ffffff;
+}
+
+.section-one {
+    margin: 1.75rem 0;
+}
+
+.section-two {
+    padding: 2rem;
+}
+
+.section-two a:not(.btn-accent),
+.section-two a:not(.btn-white) {
+    color: #ef5839;
+}
+
+.section-two h2 {
+    font-size: 24px;
+    color: #ef5839;
+    margin-top: 0;
+}
+
+.section-one .container {
+    width: 100%;
+    margin: auto;
+}
+
+.hero h1 {
+    font-weight: 900;
+    font-size: 36px;
+}
+
+.section-one .container img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+.wrapper {
+    max-width: 620px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.section-two a {
+    padding: .5rem 1rem;
+}
+
+.btn-accent {
+    background-color: #ef5839;
+    color: #ffffff !important;
+}
+
+.btn-white {
+    background-color: #ffffff;
+    color: #2e354f;
+    margin-left: 10px;
+}
+
+.section-two p:last-of-type {
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 460px) {
+
+    header {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .wrapper {
+        padding: 10px;
+    }
+}
