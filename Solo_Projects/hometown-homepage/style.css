@@ -5,12 +5,14 @@
 }
 
 body {
+    font-family: "Roboto", sans-serif;
     background-color: hsl(208, 100%, 97%);
+    height: 100vh;
 }
 
 header {
     position: relative;
-    height: 400px;
+    height: 375px;
     background-image: url('https://images.unsplash.com/photo-1565018054866-968e244671af?w=1920&q=100&auto=format&fit=crop&ixlib=rb-4.0.3');
     background-size: cover;
     background-position: center;
@@ -41,6 +43,76 @@ header::before {
     z-index: 1;
 }
 
+h2 {
+    font-size: 2.75rem;
+    font-weight: normal;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+h3 {
+    text-align: center;
+    margin: 1.5rem 0;
+    font-weight: 500;
+}
+
 main {
     background-color: #ffffff;
+}
+
+.flex {
+    max-width: 80%;
+    display: flex;
+    margin: 0 auto;
+}
+
+figcaption {
+    width: 75%;
+    font-size: .875rem;
+    margin: 0 auto;
+    line-height: 1.2;
+}
+
+img {
+    object-fit: cover;
+    height: 250px;
+    width: 250px;
+    transition: .5s ease all;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 12px;
+    background-color: aliceblue;
+}
+
+/* Media query */
+@media screen and (max-width: 1067px) {
+    main {
+        width: 100%;
+    }
+
+    .flex {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section:last-of-type {
+        margin-top: 25px;
+    }
+}
+
+@media screen and (max-width: 681px) {
+    .flex {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
