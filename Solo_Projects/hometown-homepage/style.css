@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: hsl(208, 100%, 97%);
+}
+
 header {
     position: relative;
     height: 400px;
@@ -35,4 +39,8 @@ header::before {
     background-color: rgba(0, 0, 0, 0.4);
     /* Darkens the image for better text readability */
     z-index: 1;
+}
+
+main {
+    background-color: #ffffff;
 }
