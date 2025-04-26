@@ -7,14 +7,19 @@ let initialCount = 0;
 displayEl.textContent = initialCount;
 
 const increment = () => {
-    let incrementCount = ++initialCount;
-    displayEl.textContent = incrementCount;
+    // let incrementCount = ++initialCount;
+    // displayEl.textContent = incrementCount;
+    initialCount++;
+    displayEl.textContent = initialCount;
+
 }
 
 incrementBtn.addEventListener('click', increment);
 
 const save = () => {
     saveEntry.textContent += ` ${initialCount} -`;
+    initialCount = 0;
+    displayEl.textContent = initialCount;
 }
 
 saveBtn.addEventListener('click', save);
