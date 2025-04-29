@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+    outline: unset;
+    border: unset;
+    padding: 1rem 1.5rem;
+    width: 100px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: transparent;
+    letter-spacing: 1px;
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+    outline: none;
+    /* Remove default outline */
+}
+
+button:focus-visible {
+    outline: 2px solid #252627;
+    outline-offset: 2px;
+}
+
+section:first-of-type {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+section:last-of-type {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+#result-el {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.add:hover {
+    background-color: darkorchid;
+    color: #ffffff;
+}
+
+.sub:hover {
+    background-color: orangered;
+    color: #ffffff;
+}
+
+.divide:hover {
+    background-color: tomato;
+    color: #ffffff;
+}
+
+.mul:hover {
+    background-color: darkblue;
+    color: #ffffff;
+}
