@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incrementing and Decrementing</title>
+  </head>
+  <body>
+    <script>
+      let myPoints = 3;
+
+      const add3Points = () => {
+        myPoints += 3;
+      };
+
+      const remove1Point = () => {
+        myPoints -= 1;
+      };
+
+      // Call the functions to make myPoints equal to 10
+      add3Points(); // myPoints = 6
+      add3Points(); // myPoints = 9
+      remove1Point(); // myPoints = 8
+      add3Points(); // myPoints = 11
+      remove1Point(); // myPoints = 10
+
+      console.log(myPoints); // Should log 10
+    </script>
+  </body>
+</html>
