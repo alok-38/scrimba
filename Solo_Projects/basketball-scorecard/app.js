@@ -40,6 +40,7 @@ const newGame = () => {
     homeDisplayEl.textContent = homeScore;
     guestDisplayEl.textContent = guestScore;
     highlightTheLeader();
+    updatePeriodDisplay();
 }
 
 resetBtn.addEventListener('click', newGame);
@@ -57,3 +58,34 @@ const highlightTheLeader = () => {
         guestDisplayEl.classList.remove('leader');
     }
 };
+
+const periodDisplayEl = document.querySelector('.period-display');
+const periodUpBtn = document.getElementById('period_up');
+const periodDownBtn = document.getElementById('period_down');
+
+let period = 1;
+const MAX_PERIOD = 4;
+const MIN_PERIOD = 1;
+
+// Functions to update the period:
+const updatePeriodDisplay = () => {
+    periodDisplayEl.textContent = period;
+};
+
+const nextPeriod = () => {
+    if (period < MAX_PERIOD) {
+        period++;
+        updatePeriodDisplay();
+    }
+};
+
+const prevPeriod = () => {
+    if (period > MIN_PERIOD) {
+        period--;
+        updatePeriodDisplay();
+    }
+};
+
+// Add event listeners
+periodUpBtn.addEventListener('click', nextPeriod);
+periodDownBtn.addEventListener('click', prevPeriod);
