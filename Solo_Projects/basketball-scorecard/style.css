@@ -19,8 +19,9 @@ body {
 }
 
 main {
+    max-width: 640px;
+    width: 100%;
     height: 385px;
-    max-width: 1040px;
     background-color: #4C1D95;
     border-radius: 15px;
     display: flex;
@@ -37,6 +38,9 @@ h1 {
     color: #ffffff;
     font-weight: 900;
     font-size: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 /* display */
@@ -55,12 +59,14 @@ h1 {
     justify-content: center;
     border-radius: 5px;
     padding-top: 15px;
+    margin-bottom: 26px;
 }
 
 .counter {
     width: 155px;
     display: flex;
     justify-content: space-around;
+    gap: 10px;
 }
 
 button {
@@ -76,4 +82,33 @@ button {
     border: unset;
     border: 2px solid #ffffff;
     color: #ffffff;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    background-color: #F94F6D;
+}
+
+button:focus {
+    box-shadow: 0 0 0 3px rgba(249, 79, 109, 0.5);
+    border: 2px solid #d83d59;
+}
+
+/* Active effect */
+button:active {
+    transform: scale(0.95);
+}
+
+
+/* Stretch Goals */
+#reset {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+}
+
+/* leader */
+.leader {
+    background-color: #FBBF24;
 }
