@@ -1,15 +1,28 @@
-// Check if the person is elegible for a birthday card from the King! (100)
+let firstCard = 10;
+let secondCard = 4;
+let sum = firstCard + secondCard;
+let hasBlackJack = false;
+let isAlive = true;
+let message = "";
+// 1. Store the message-el paragraph in a variable called messageEl
+const messageEl = document.getElementById('message-el');
 
-let age = 100
+// 2. Create a startGame() function. Move the conditional
+// below (line 11-20) inside the body of the function.
 
-// if less than 100    -> "Not elegible"
-// else if exactly 100 -> "Here is your birthday card from the King!"
-// else                -> "Not elegible, you have already gotten one"
-
-if (age < 100) {
-    console.log("Not elegible");
-} else if (age === 100) {
-    console.log("Here is your birthday card from the King!");
-} else {
-    console.log("Not elegible, you have already gotten one");
+const startGame = () => {
+    if (sum <= 20) {
+        message = "Do you want to draw a new card? 🙂";
+    } else if (sum === 21) {
+        message = "Wohoo! You've got Blackjack! 🥳";
+        hasBlackJack = true
+    } else {
+        message = "You're out of the game! 😭";
+        isAlive = false;
+    }
+    // 2. Display the message in the messageEl using messageEl.textContent
+    messageEl.textContent = message;
 }
+
+const buttonEl = document.querySelector('button');
+buttonEl.addEventListener('click', startGame);

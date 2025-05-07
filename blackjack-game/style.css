@@ -1,0 +1,67 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+    background-image: url("images/table.png");
+    background-size: cover;
+    font-weight: bold;
+    color: white;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    height: 100vh;
+}
+
+h1 {
+    color: goldenrod;
+    font-size: 5rem;
+}
+
+#message-el {
+    font-style: italic;
+    font-size: 2rem;
+}
+
+#message-el+p,
+p:last-of-type {
+    font-size: 1.75rem;
+}
+
+/* 
+3. Style the button according to the provided design
+text color - #016f32
+width      - 150px
+background - goldenrod
+ */
+
+button {
+    color: #016f32;
+    width: 150px;
+    background-color: goldenrod;
+    cursor: pointer;
+    outline: unset;
+    border: unset;
+    padding: 1rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #d4af37;
+    /* slightly darker goldenrod */
+    color: #016f32;
+    transform: scale(1.05);
+}
+
+/* Focus effect */
+button:focus {
+    box-shadow: 0 0 0 3px rgba(1, 111, 50, 0.5);
+}
+
+/* Active (click) effect */
+button:active {
+    background-color: #b8860b;
+    /* even darker goldenrod */
+    transform: scale(0.98);
+}
