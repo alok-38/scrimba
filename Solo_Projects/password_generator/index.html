@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random password generator</title>
+    <link rel="icon" href="https://fav.farm/👓" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>Generate a <span>random password</span></h1>
+        <p>Never use an insecure password again.</p>
+      </section>
+      <section>
+        <label>
+          <input type="checkbox" id="includeSymbols" checked />
+          Include symbols
+        </label>
+        <label>
+          <input type="checkbox" id="includeNumbers" checked />
+          Include numbers
+        </label>
+      </section>
+      <section>
+        <button>Generate passwords</button>
+        <input
+          type="range"
+          name="range"
+          id="range"
+          min="8"
+          max="32"
+          value="16"
+        />
+      </section>
+      <section><input type="text" /><input type="text" /></section>
+    </main>
+  </body>
+</html>

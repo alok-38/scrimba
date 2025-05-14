@@ -13,11 +13,31 @@ const sumEl = document.querySelector('p:last-of-type');
 // 2. Store the cards paragraph in a variable called cardsEl
 const cardsEl = document.querySelector('#message-el+p');
 
+const getRandomCard = () => {
+    // if 1     -> return 11
+    // if 11-13 -> return 10
+    let randomNumer = Math.floor(Math.random() * 13) + 1
+    if (randomNumer > 10) {
+        return 10
+    } else if (randomNumer === 1) {
+        return 11
+    } else {
+        return randomNumer
+    }
+}
+
 // 2. Create a startGame() function. Move the conditional
 // below (line 11-20) inside the body of the function.
 
 // Create a new function called startGame() that calls renderGame()
 const startGame = () => {
+    isAlive = true
+    // Generate two random numbes
+    // Re-assign the cards and sum variables so that the game can start
+    let firstCard = getRandomCard();
+    let secondCard = getRandomCard();
+    cards = [firstCard, secondCard];
+    sum = firstCard + secondCard;
     renderGame();
 }
 
@@ -49,16 +69,18 @@ buttonEl.addEventListener('click', startGame);
 
 // 2. Create a function newCard() that logs out "Drawing a new card from the deck!"
 const newCard = () => {
-    console.log("Drawing a new card from the deck!");
-    // 1. Create a card variable, and hard code its value to a number (2-11)
-    let card = 5;
+    // Only allow the player to get a new card if she IS alive and does NOT have Blackjack
+    if (isAlive === true && hasBlackJack === false) {
+        let card = getRandomCard();
+        // 2. Add the new card to the sum variable
+        sum += card;
+        // 3. Call startGame()
+        // Push the card to the cards array
+        cards.push(card);
+        renderGame();
+    }
 
-    // 2. Add the new card to the sum variable
-    sum += card;
-    // 3. Call startGame()
-    // Push the card to the cards array
-    cards.push(card);
-    renderGame();
+
 }
 
 const newCardBtnEl = document.querySelector('button:last-of-type');
