@@ -1,0 +1,53 @@
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+  }
+
+  h1 {
+      color: #2c3e50;
+  }
+
+  h2 {
+      color: #7f8c8d;
+  }
+
+  form {
+      max-width: 400px;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+  }
+
+  form div {
+      margin-bottom: 25px;
+  }
+
+  form div:nth-child(3) input {
+      padding-left: 70px;
+  }
+
+  .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+  }
+
+  label {
+      margin-bottom: 5px;
+      font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="file"] {
+      padding: 8px;
+      font-size: 14px;
+  }
+
+  button {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+  }
