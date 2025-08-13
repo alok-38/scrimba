@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+}
+
+header {
+    display: flex;
+}
+
+.header-content {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+button {
+    outline: unset;
+    border: unset;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+
+main {
+    display: flex;
+}
