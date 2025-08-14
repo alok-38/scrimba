@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    display: block;
+    object-fit: cover;
+    height: 300px;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    padding: 25px 5px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    background-color: cadetblue;
+    padding: 15px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: #ffffff;
+}
