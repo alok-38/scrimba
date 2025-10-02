@@ -1,13 +1,39 @@
-const buttonEl = document.querySelector('button');
-const inputEl = document.querySelector('input');
+const formEl = document.getElementById('input-form');
+const inputEl = document.getElementById('input-item');
 const ulEl = document.querySelector('ul');
-const formEl = document.querySelector('form');
 
-function addItem() {
+function addItem(event) {
+    event.preventDefault();
+
     const inputValue = inputEl.value.trim();
+    if (inputValue === '') return;
+
     const liEl = document.createElement('li');
-    liEl.appendChild(inputValue);
+
+    // ✅ Create span for the text
+    const textSpan = document.createElement('span');
+    textSpan.textContent = inputValue;
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'Delete';
+
+    deleteBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent li click effect
+        ulEl.removeChild(liEl);
+    });
+
+    // ✅ Only apply style to the span, not the button
+    liEl.addEventListener('click', () => {
+        const isStruck = textSpan.style.textDecoration === 'line-through';
+        textSpan.style.textDecoration = isStruck ? 'none' : 'line-through';
+        textSpan.style.fontSize = '32px'; // Just styling the text, not the button
+    });
+
+    liEl.appendChild(textSpan);
+    liEl.appendChild(deleteBtn);
     ulEl.appendChild(liEl);
+
+    inputEl.value = '';
 }
 
-buttonEl.addEventListener('click', addItem);
+formEl.addEventListener('submit', addItem);

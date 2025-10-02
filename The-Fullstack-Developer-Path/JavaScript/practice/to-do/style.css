@@ -6,9 +6,10 @@
 
 body {
     display: flex;
-    align-items: center;
     justify-content: center;
     margin-top: 50px;
+    flex-direction: column;
+    margin-left: 35%;
 }
 
 form {
@@ -46,8 +47,12 @@ input::placeholder {
 ul {
     margin-top: 25px;
     list-style-type: none;
+    padding-left: 15px;
 }
 
 li {
     margin-bottom: 15px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
 }
