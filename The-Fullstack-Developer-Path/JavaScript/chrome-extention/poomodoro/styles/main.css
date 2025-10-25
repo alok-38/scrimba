@@ -1,0 +1,139 @@
+@import url(variables.css);
+
+body {
+    margin: 0;
+    padding: 1rem;
+    font-family: var(--font-primary);
+}
+
+/* ---------------- BASE BUTTON STYLING ---------------- */
+button {
+    outline: none;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------------- BUTTON VARIANTS ---------------- */
+#startBtn {
+    background-color: #28a745;
+    /* Green */
+    color: white;
+}
+
+#pauseBtn {
+    background-color: #ffc107;
+    /* Yellow */
+    color: #333;
+}
+
+#saveBtn {
+    background-color: #007bff;
+    /* Blue */
+    color: white;
+}
+
+#resetBtn {
+    background-color: #dc3545;
+    /* Red */
+    color: white;
+}
+
+#add-task {
+    background-color: #17a2b8;
+    /* Teal */
+    color: white;
+}
+
+/* ---------------- HOVER EFFECTS ---------------- */
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+/* ---------------- FOCUS EFFECTS ---------------- */
+button:focus {
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
+}
+
+/* ---------------- ACTIVE / PRESS EFFECTS ---------------- */
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    filter: brightness(0.9);
+}
+
+/* ---------------- DISABLED BUTTON ---------------- */
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    filter: none;
+}
+
+/* ---------------- INPUT BASE STYLING ---------------- */
+input[type="number"],
+input[type="text"] {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ---------------- HOVER EFFECTS ---------------- */
+input[type="number"]:hover,
+input[type="text"]:hover {
+    border-color: #007bff;
+    /* accent color on hover */
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.15);
+}
+
+/* ---------------- FOCUS EFFECTS ---------------- */
+input[type="number"]:focus,
+input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* ---------------- ACTIVE / PRESS EFFECTS ---------------- */
+input[type="number"]:active,
+input[type="text"]:active {
+    border-color: #0056b3;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------------- REMOVE NUMBER SPINNERS ---------------- */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+/* ---------------- DISABLED INPUT ---------------- */
+input:disabled {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    cursor: not-allowed;
+}
+
+/* ---------------- PLACEHOLDER STYLING ---------------- */
+input::placeholder {
+    color: #999;
+    opacity: 1;
+    /* Firefox */
+}
