@@ -1,9 +1,18 @@
 @import url(variables.css);
 
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     padding: 1rem;
     font-family: var(--font-primary);
+    width: 40vw;
+    background-color: #fff;
+    color: #333;
+    /* Base text color for accessibility */
 }
 
 /* ---------------- BASE BUTTON STYLING ---------------- */
@@ -20,56 +29,57 @@ button {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
-/* ---------------- BUTTON VARIANTS ---------------- */
+/* ---------------- BUTTON VARIANTS (ACCESSIBLE COLORS) ---------------- */
 #startBtn {
     background-color: #28a745;
     /* Green */
-    color: white;
+    color: #fff;
 }
 
 #pauseBtn {
-    background-color: #ffc107;
-    /* Yellow */
-    color: #333;
+    background-color: #e6a700;
+    /* Darker yellow for contrast */
+    color: #000;
+    /* Black text for readability */
 }
 
 #saveBtn {
     background-color: #007bff;
     /* Blue */
-    color: white;
+    color: #fff;
 }
 
 #resetBtn {
     background-color: #dc3545;
     /* Red */
-    color: white;
+    color: #fff;
 }
 
 #add-task {
     background-color: #17a2b8;
     /* Teal */
-    color: white;
+    color: #fff;
 }
 
-/* ---------------- HOVER EFFECTS ---------------- */
+/* ---------------- BUTTON HOVER EFFECTS ---------------- */
 button:hover {
     transform: translateY(-2px);
     filter: brightness(1.1);
 }
 
-/* ---------------- FOCUS EFFECTS ---------------- */
+/* ---------------- BUTTON FOCUS EFFECTS ---------------- */
 button:focus {
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
 }
 
-/* ---------------- ACTIVE / PRESS EFFECTS ---------------- */
+/* ---------------- BUTTON ACTIVE / PRESS EFFECTS ---------------- */
 button:active {
     transform: translateY(1px);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
     filter: brightness(0.9);
 }
 
-/* ---------------- DISABLED BUTTON ---------------- */
+/* ---------------- BUTTON DISABLED ---------------- */
 button:disabled {
     cursor: not-allowed;
     opacity: 0.5;
@@ -82,49 +92,47 @@ input[type="text"] {
     font-family: inherit;
     font-size: 1rem;
     padding: 0.5rem 0.8rem;
-    border: 2px solid #ccc;
+    border: 2px solid #666;
+    /* darker border for contrast */
     border-radius: 6px;
     transition: all 0.2s ease-in-out;
     outline: none;
     width: 100%;
     box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
 }
 
-/* ---------------- HOVER EFFECTS ---------------- */
+/* ---------------- INPUT HOVER EFFECTS ---------------- */
 input[type="number"]:hover,
 input[type="text"]:hover {
     border-color: #007bff;
-    /* accent color on hover */
+    /* Accent color */
     box-shadow: 0 2px 5px rgba(0, 123, 255, 0.15);
 }
 
-/* ---------------- FOCUS EFFECTS ---------------- */
+/* ---------------- INPUT FOCUS EFFECTS ---------------- */
 input[type="number"]:focus,
 input[type="text"]:focus {
     border-color: #007bff;
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
 
-/* ---------------- ACTIVE / PRESS EFFECTS ---------------- */
+/* ---------------- INPUT ACTIVE / PRESS EFFECTS ---------------- */
 input[type="number"]:active,
 input[type="text"]:active {
     border-color: #0056b3;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* ---------------- REMOVE NUMBER SPINNERS ---------------- */
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+/* ---------------- REMOVE NUMBER SPINNERS (Webkit only) ---------------- */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-input[type="number"] {
-    -moz-appearance: textfield;
-    /* Firefox */
-}
-
-/* ---------------- DISABLED INPUT ---------------- */
+/* ---------------- INPUT DISABLED ---------------- */
 input:disabled {
     background-color: #f5f5f5;
     border-color: #ddd;
@@ -133,7 +141,63 @@ input:disabled {
 
 /* ---------------- PLACEHOLDER STYLING ---------------- */
 input::placeholder {
-    color: #999;
+    color: #6e6e6e;
+    /* darker placeholder for contrast */
     opacity: 1;
-    /* Firefox */
+}
+
+/* ---------------- TIMER DISPLAY ---------------- */
+section:nth-of-type(2) div {
+    font-size: 3.75rem;
+    color: #dc3545;
+    /* Red timer text */
+}
+
+/* ---------------- FIELDSET / LEGEND ---------------- */
+fieldset {
+    border: unset;
+}
+
+legend {
+    display: none;
+}
+
+/* ---------------- HEADINGS ---------------- */
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #1f2328;
+}
+
+/* ---------------- SECTIONS ---------------- */
+section {
+    margin-bottom: 25px;
+}
+
+/* ---------------- INPUT MARGINS ---------------- */
+input[type="number"],
+input[type="text"] {
+    margin-top: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: var(--weight-light);
+    font-style: normal;
+    line-height: 1.4;
+    color: #333
+}
+
+/* ---------------- BUTTON MARGINS ---------------- */
+section:last-of-type button {
+    margin-top: 5px;
+}
+
+/* ---------------- LABEL COLORS ---------------- */
+label {
+    color: #17a2b8;
+    /* teal label color */
 }

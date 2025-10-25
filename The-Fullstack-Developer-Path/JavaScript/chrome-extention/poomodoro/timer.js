@@ -1,27 +1,33 @@
-const work_interval = 25 * 60       // 25 minutes in seconds
-const short_break = 5 * 60          // 5 minutes in seconds
-const long_break = 20 * 60          // 20 minutes in seconds
-const pomodoros_before_long_break = 4
-let pomodoro_count = 0
-let tasks = ["Write report", "Study math", "Clean desk"];
+const buttons = document.querySelectorAll('section:nth-of-type(3) button');
+const addButton = document.getElementById('add-task');
 
+const workInput = document.getElementById('work-time');
+const breakInput = document.getElementById('break-time');
+const taskInput = document.getElementById('new-task');
+const timer = document.getElementById('timer');
 
-function task_remaining() {
-    return tasks.length > 0;
-}
+// Add a click event to each button
+buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        console.log(`${btn.id} clicked!`);
+    });
+});
 
-while (task_remaining()) {
-    let currentTask = tasks.shift();
-    console.log(`Working on: ${currentTask} for ${work_interval / 60} minutes`);
-    // Here you would start a timer: start_timer(work_interval)
-    pomodoro_count++;
-    if (pomodoro_count % pomodoros_before_long_break === 0) {
-        console.log(`Take a long break for ${long_break / 60} minutes`);
-        // start_timer(long_break)
-    } else {
-        console.log(`Take a short break for ${short_break / 60} minutes`);
-        // start_timer(short_break)
+let workDuration = parseInt(workInput.value) || 25 * 60; // in seconds
+let breakDuration = parseInt(breakInput.value) || 5 * 60; // in seconds
+let timeRemaining = workDuration;
+let isRunning = false;
+let pomodoroCount = 0;
+
+const taskList = document.getElementById('task-list');
+
+// take the text from the task input and append it to the task list
+addButton.addEventListener('click', () => {
+    const taskText = taskInput.value.trim();
+    if (taskText !== '') {
+        const li = document.createElement('li');
+        li.textContent = taskText;
+        taskList.appendChild(li);
+        taskInput.value = ''; // clear the input
     }
-}
-
-console.log("All tasks completed. Well done!");
+});

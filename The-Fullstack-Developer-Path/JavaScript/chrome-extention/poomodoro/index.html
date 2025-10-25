@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <h1>Pomodoro Timer</h1>
+        <h1>Pomodoro Timer Extention</h1>
     </header>
 
     <!-- Timer Settings -->
@@ -21,13 +21,14 @@
             <fieldset>
                 <legend>Work Duration</legend>
                 <label for="work-time">Work Time (minutes):</label>
-                <input type="number" id="work-time" name="work-time" min="1" value="25">
+                <input type="number" id="work-time" name="work-time" min="1" placeholder="25">
+
             </fieldset>
 
             <fieldset>
                 <legend>Break Duration</legend>
                 <label for="break-time">Break Time (minutes):</label>
-                <input type="number" id="break-time" name="break-time" min="1" value="5">
+                <input type="number" id="break-time" name="break-time" min="1" placeholder="5">
             </fieldset>
         </form>
     </section>
@@ -54,7 +55,7 @@
         </ul>
         <label for="new-task">Add Task:</label>
         <input type="text" id="new-task" name="new-task" placeholder="New task">
-        <button id="add-task">Add</button>
+        <button type="button" id="add-task">Add</button>
     </section>
 </body>
 
