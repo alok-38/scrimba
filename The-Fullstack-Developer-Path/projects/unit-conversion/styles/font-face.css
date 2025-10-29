@@ -1,0 +1,41 @@
+/* ==========================
+   FONT-FACE DECLARATIONS
+   ========================== */
+
+/* Inter Variable Font */
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter,Roboto/Inter/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Inter Italic Variable Font */
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter,Roboto/Inter/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Roboto Variable Font */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Inter,Roboto/Roboto/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-stretch: 75% 125%;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Roboto Italic Variable Font */
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Inter,Roboto/Roboto/Roboto-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-stretch: 75% 125%;
+    font-style: italic;
+    font-display: swap;
+}

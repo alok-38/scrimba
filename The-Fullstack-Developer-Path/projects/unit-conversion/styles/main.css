@@ -1,0 +1,25 @@
+@import url(reset.css);
+@import url(typography.css);
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    width: 100%;
+    font-family: var(--font-primary);
+}
+
+header {
+    background-color: var(--clr-primary-light);
+}
+
+main {
+    background-color: var(--clr-bg);
+}

@@ -1,0 +1,68 @@
+/* ========================
+   Base Color System
+   ======================== */
+
+/* Default: Light Theme */
+:root {
+    /* ===== Brand Colors ===== */
+    --clr-primary: #2563eb;
+    --clr-primary-light: #3b82f6;
+    --clr-primary-dark: #1e40af;
+
+    /* ===== Neutral / Backgrounds ===== */
+    --clr-bg: #f9fafb;
+    --clr-surface: #ffffff;
+    --clr-border: #e5e7eb;
+    --clr-shadow: rgba(0, 0, 0, 0.05);
+
+    /* ===== Text ===== */
+    --clr-text-primary: #111827;
+    --clr-text-secondary: #374151;
+    --clr-text-muted: #6b7280;
+    --clr-text-invert: #ffffff;
+
+    /* ===== Feedback ===== */
+    --clr-success: #16a34a;
+    --clr-warning: #eab308;
+    --clr-error: #dc2626;
+
+    /* ===== Inputs / UI ===== */
+    --clr-input-bg: #ffffff;
+    --clr-input-border: #d1d5db;
+    --clr-input-focus: var(--clr-primary);
+    --clr-disabled: #9ca3af;
+
+    /* ===== Shadows ===== */
+    --shadow-sm: 0 1px 2px var(--clr-shadow);
+    --shadow-md: 0 2px 8px var(--clr-shadow);
+}
+
+/* ========================
+   Dark Theme Override
+   ======================== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --clr-bg: #0f172a;
+        --clr-surface: #1e293b;
+        --clr-border: #334155;
+        --clr-shadow: rgba(0, 0, 0, 0.4);
+
+        --clr-text-primary: #f1f5f9;
+        --clr-text-secondary: #cbd5e1;
+        --clr-text-muted: #94a3b8;
+        --clr-text-invert: #0f172a;
+
+        --clr-input-bg: #1e293b;
+        --clr-input-border: #475569;
+        --clr-input-focus: var(--clr-primary-light);
+        --clr-disabled: #64748b;
+
+        --clr-primary: #3b82f6;
+        --clr-primary-light: #60a5fa;
+        --clr-primary-dark: #1d4ed8;
+
+        --clr-success: #22c55e;
+        --clr-warning: #facc15;
+        --clr-error: #ef4444;
+    }
+}
