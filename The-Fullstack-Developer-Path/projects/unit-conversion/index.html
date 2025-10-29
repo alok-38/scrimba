@@ -7,19 +7,26 @@
     <title>Metric/Imperial Unit Conversion</title>
     <link rel="stylesheet" href="styles/main.css">
     <script src="app.js" defer></script>
+    <script src="theme.js" defer></script>
 </head>
 
 <body>
     <div class="container">
         <header>
             <section class="theme-toggle">
-                <button id="theme-toggle-btn" aria-label="Toggle dark mode">
-                    🌞
-                </button>
+                <h1>Metric/Imperial Unit Conversion</h1>
+                <div class="toggle">
+                    <button type="button" id="theme-toggle-btn" aria-label="Toggle dark mode">
+                        <span class="icon-sun">🌞</span>
+                        <span class="icon-moon">🌙</span>
+                    </button>
+                </div>
+
             </section>
-            <h1>Metric/Imperial Unit Conversion</h1>
-            <input type="number" id="number">
-            <button type="button">Convert</button>
+            <section>
+                <input type="number" id="number" autofocus>
+                <button type="button">Convert</button>
+            </section>
         </header>
         <main>
             <article>
