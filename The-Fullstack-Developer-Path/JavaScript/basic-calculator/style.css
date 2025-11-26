@@ -1,0 +1,129 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5;
+}
+
+main {
+    height: 75vh;
+}
+
+section:first-of-type {
+    display: flex;
+    margin-bottom: 1.5rem;
+
+}
+
+section {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+section:last-of-type {
+    display: flex;
+}
+
+input,
+button {
+    outline: unset;
+    border: unset;
+    cursor: pointer;
+}
+
+input[type="number"] {
+    width: 15%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: .25rem;
+    font-size: 1rem;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    text-align: center;
+}
+
+/* Hover */
+input[type="number"]:hover {
+    border-color: #888;
+}
+
+/* Focus */
+input[type="number"]:focus {
+    outline: none;
+    border-color: #4A90E2;
+    box-shadow: 0 0 4px rgba(74, 144, 226, 0.6);
+}
+
+/* Remove arrows in Chrome/Edge/Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+p {
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+button {
+    outline: none;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: .35rem;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
+}
+
+/* --- Individual Colors --- */
+
+#add {
+    background: #2ecc71;
+    /* green */
+}
+
+#subtract {
+    background: #e74c3c;
+    /* red */
+}
+
+#divide {
+    background: #3498db;
+    /* blue */
+}
+
+#multiply {
+    background: #9b59b6;
+    /* purple */
+}
+
+/* --- Hover (slightly darker) --- */
+
+#add:hover {
+    background: #27ae60;
+}
+
+#subtract:hover {
+    background: #c0392b;
+}
+
+#divide:hover {
+    background: #2c80b7;
+}
+
+#multiply:hover {
+    background: #8e44ad;
+}
+
+/* --- Focus (glow) --- */
+button:focus {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Active / Press effect --- */
+button:active {
+    transform: scale(0.96);
+}
