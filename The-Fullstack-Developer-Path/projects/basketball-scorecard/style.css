@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1B244A;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5rem;
+    color: #EEEEEE;
+    font-family: "Vend Sans", sans-serif;
+}
+
+section {
+    display: flex;
+    gap: 3.25rem;
+}
+
+/* bottom section */
+.bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+section article:nth-child(2) {
+    display: flex;
+    justify-content: center;
+}
+
+section article:nth-child(2) button {
+    outline: none;
+    border: none;
+    background: #9AABD8;
+    /* same background */
+    color: #1B1F3B;
+    /* dark navy — passes WCAG */
+    font-size: 1.75rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.15s ease,
+        box-shadow 0.25s ease;
+}
+
+/* Hover */
+section article:nth-child(2) button:hover,
+section article:nth-child(2) button:focus {
+    background: #8d9ec9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Focus */
+section article:nth-child(2) button:focus {
+    box-shadow: 0 0 8px rgba(154, 171, 216, 0.85);
+}
+
+/* Press effect */
+section article:nth-child(2) button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+
+#score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    font-size: 90px;
+    color: #F94F6D;
+    width: 155px;
+    height: 120px;
+    background-color: #080001;
+    border-radius: 5px;
+}
+
+h2,
+h3 {
+    font-family: "Vend Sans", sans-serif;
+    font-size: clamp(24px, 4vw, 40px);
+    color: #EEEEEE;
+    font-weight: 700;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.buttons button {
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #9AABD8;
+    background: transparent;
+    color: #9AABD8;
+
+    /* Smooth transitions */
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.15s ease,
+        box-shadow 0.25s ease;
+}
+
+/* 🔵 Hover → slight color shift + glow */
+.buttons button:hover {
+    background: #9AABD8;
+    color: #1B244A;
+    border-color: #B2C6FF;
+    box-shadow: 0 0 6px rgba(154, 171, 216, 0.6);
+}
+
+/* 🔵 Focus (keyboard navigation) */
+.buttons button:focus {
+    box-shadow: 0 0 6px rgba(154, 171, 216, 0.8);
+}
+
+/* 🔵 Active/press → small scale press */
+.buttons button:active {
+    transform: scale(0.92);
+    background: #7f8fc0;
+    border-color: #7f8fc0;
+}
