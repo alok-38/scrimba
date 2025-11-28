@@ -84,8 +84,7 @@ section article:nth-child(2) button:active {
 #homeScore,
 #guestScore,
 #period,
-#fouls,
-#timer {
+#fouls {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,6 +95,20 @@ section article:nth-child(2) button:active {
     height: 120px;
     background-color: #080001;
     border-radius: 5px;
+}
+
+#timer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    font-size: 90px;
+    color: #F94F6D;
+    height: 120px;
+    background-color: #080001;
+    border-radius: 5px;
+    padding: 0 15px;
 }
 
 h2,
