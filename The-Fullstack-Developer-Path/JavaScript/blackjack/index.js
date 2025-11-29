@@ -1,25 +1,58 @@
-let firstCard = 10;
-let secondCard = 4;
-let sum = firstCard + secondCard;
+// Always returns 5 for now (you’ll randomize later)
+const getRandomCard = () => {
+    const randomNum = Math.floor(Math.random() * 13) + 1;
+
+    if (randomNum === 1) {
+        return 11; // Ace
+    } else if (randomNum > 10) {
+        return 10; // J, Q, K
+    } else {
+        return randomNum; // 2–10
+    }
+};
+
+// 2. Create the player object. Give it two keys, name and chips, and set their values
+const player = {
+    name: "Alok",
+    chips: 5
+}
+// Game state variables
+let cards = [];
+let sum = 0;
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
 let message = "";
 
+// DOM elements
 const startButtonEl = document.querySelector('button:first-of-type');
-const sumEl = document.getElementById('sum');
+const newGameBtnEl = document.querySelector('button:last-of-type');
+const sumEl = document.getElementById('sum-el');
 const messageEl = document.getElementById('message-el');
-const sumEL = document.getElementById('sum-el');
 const cardsEl = document.getElementById('cards-el');
+const playerEl = document.getElementById('player-el');
 
+// 4. Render the player's name and chips in playerEl
+playerEl.textContent = `${player.name}: ${player.chips}`;
+
+// Start Game = reset everything and deal two cards
 const startGame = () => {
+    hasBlackJack = false;
+    isAlive = true;
+
+    const firstCard = getRandomCard();
+    const secondCard = getRandomCard();
+
+    cards = [firstCard, secondCard];
+    sum = firstCard + secondCard;
+
+    newGameBtnEl.disabled = false; // re-enable button
+
     renderGame();
-}
+};
 
 const renderGame = () => {
-    // 3. Render the sum on the page using this format -> "Sum: 14"
-    // 3. Render the cars on the page using this format -> "Cards: 10 4"
-    cardsEl.textContent = `Cards: ${firstCard} ${secondCard}`;
-    sumEL.textContent = `Sum: ${sum}`;
+    cardsEl.textContent = `Cards: ${cards.join(" ")}`;
+    sumEl.textContent = `Sum: ${sum}`;
 
     if (sum <= 20) {
         message = "Do you want to draw a new card? 🙂";
@@ -28,28 +61,24 @@ const renderGame = () => {
         hasBlackJack = true;
     } else {
         message = "You're out of the game! 😭";
-        isAlive = false
+        isAlive = false;
+        newGameBtnEl.disabled = true; // Disable new card when bust
     }
+
     messageEl.textContent = message;
-}
+};
 
-// 2. Create a startGame() function. Move the conditional
-// below (line 11-20) inside the body of the function.
-
-startButtonEl.addEventListener('click', startGame);
-
-// 2. Create a function newCard() that logs out "Drawing a new card from the deck!"
+// Draw New Card
 const newCard = () => {
-    console.log("Drawing a new card from the deck!");
-    // 1. Create a card variable, and hard code its value to a number (2-11)
+    if (!isAlive || hasBlackJack) return; // prevent cheating
 
-    // 2. Add the new card to the sum variable
+    const card = getRandomCard();
+    cards.push(card);
+    sum += card;
 
-    // 3. Call startGame()
-    let card = 5;
-    sumEL.textContent = `Sum: ${sum + card}`;
-}
+    renderGame();
+};
 
-const newGameBtnEl = document.querySelector('button:last-of-type');
-
+// Button listeners
+startButtonEl.addEventListener('click', startGame);
 newGameBtnEl.addEventListener('click', newCard);
