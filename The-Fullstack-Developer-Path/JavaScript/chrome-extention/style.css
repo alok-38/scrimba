@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+
+Style our app according to the provided design!
+
+green color -> #5f9341
+
+*/
+
+input,
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    transition:
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.15s ease;
+}
+
+/* INPUT */
+input {
+    border: 1px solid #5f9341;
+    width: 500px;
+    height: 40px;
+    padding: 0 .75rem;
+    cursor: text;
+}
+
+/* Hover */
+input:hover {
+    border-color: #76b956;
+}
+
+/* Focus */
+input:focus {
+    border-color: #76b956;
+    box-shadow: 0 0 0 3px rgba(95, 147, 65, 0.3);
+}
+
+/* Active (press) */
+input:active {
+    transform: scale(0.99);
+}
+
+
+/* BUTTON */
+button {
+    display: flex;
+    align-items: center;
+    background-color: #5f9341;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: .5rem;
+    border-radius: 4px;
+}
+
+/* Hover */
+button:hover {
+    background-color: #76b956;
+}
+
+/* Focus (keyboard users) */
+button:focus {
+    box-shadow: 0 0 0 3px rgba(95, 147, 65, 0.4);
+}
+
+/* Active (click/press) */
+button:active {
+    transform: scale(0.97);
+    background-color: #4c7b34;
+}
