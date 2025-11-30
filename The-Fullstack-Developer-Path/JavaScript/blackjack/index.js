@@ -14,7 +14,7 @@ const getRandomCard = () => {
 // 2. Create the player object. Give it two keys, name and chips, and set their values
 const player = {
     name: "Alok",
-    chips: 5
+    chips: 100
 }
 // Game state variables
 let cards = [];
@@ -32,7 +32,7 @@ const cardsEl = document.getElementById('cards-el');
 const playerEl = document.getElementById('player-el');
 
 // 4. Render the player's name and chips in playerEl
-playerEl.textContent = `${player.name}: ${player.chips}`;
+playerEl.textContent = `${player.name}: $${player.chips}`;
 
 // Start Game = reset everything and deal two cards
 const startGame = () => {
@@ -59,14 +59,21 @@ const renderGame = () => {
     } else if (sum === 21) {
         message = "Wohoo! You've got Blackjack! 🥳";
         hasBlackJack = true;
+        player.chips += 20;
+        playerEl.textContent = `${player.name}: $${player.chips}`;
+        startButtonEl.disabled = false;
     } else {
         message = "You're out of the game! 😭";
         isAlive = false;
-        newGameBtnEl.disabled = true; // Disable new card when bust
+        newGameBtnEl.disabled = true;
+        player.chips -= 10;
+        playerEl.textContent = `${player.name}: $${player.chips}`;
+        startButtonEl.disabled = false;
     }
 
     messageEl.textContent = message;
 };
+
 
 // Draw New Card
 const newCard = () => {

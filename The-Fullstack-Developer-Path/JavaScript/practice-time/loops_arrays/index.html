@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let largeCountries = ["China", "India", "USA", "Indonesia", "Pakistan"]
+
+        /* Use a for loop to log the following to the console:
+        
+        The 5 largest countries in the world:
+        - China
+        - India
+        - United States
+        - Indinesia
+        - Pakistan
+        */
+        for (let index = 0; index < largeCountries.length; index++) {
+            console.log(largeCountries[index]);
+        }
+
+        let largeCountriesList = ["Tuvalu", "India", "USA", "Indonesia", "Monaco"]
+
+        // You need to help me fixup the largeCountries array so that 
+        // China and Pakistan are added back into their respective places
+
+        // Use push() & pop() and their counterparts unshift() & shift()
+        // Google how to use unshift() and shift()
+
+        largeCountriesList.pop("Monaco");
+        largeCountriesList.push("Pakistan");
+        console.log(largeCountriesList);
+        largeCountriesList.shift("Tuvalu");
+        largeCountriesList.unshift("China");
+        console.log(largeCountriesList);
+        
+    </script>
+</body>
+
+</html>
