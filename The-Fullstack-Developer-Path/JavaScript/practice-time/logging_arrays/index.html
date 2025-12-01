@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let myCourses = ["Learn CSS Animations", "UI Design Fundamentals", "Intro to Clean Code"]
+
+        // Create a function that takes a single parameter, an array,
+        // and logs all the items of the array to the console.
+        // Call the function while passing in myCourses as an argument
+        const logArrayItems = (anArray = []) => {
+            for (let index = 0; index < anArray.length; index++) {
+                console.log(anArray[index]);
+            }
+        }
+        logArrayItems(myCourses);
+    </script>
+</body>
+
+</html>
