@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    max-width: 550px;
+    width: 100%;
+}
+
+input,
+button {
+    display: block;
+    margin: auto;
+    background: transparent;
+    cursor: pointer;
+    font-family: inherit;
+    outline: unset;
+    border: unset;
+    border-radius: 5px;
+}
+
+header {
+    background-color: #6943FF;
+    color: #fff;
+    text-align: center;
+    height: 285px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 900;
+    padding: 2rem;
+}
+
+button {
+    color: #3D3D3D;
+    background-color: #fff;
+    width: 117px;
+    height: 42px;
+    font-weight: 600;
+    font-size: 1rem;
+    /* Smooth animation for all interactive states */
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+    margin: 2rem auto;
+}
+
+/* Hover: subtle lift + slight color change */
+button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus: accessibility-friendly outline */
+button:focus {
+    outline: 3px solid #0078ff;
+    outline-offset: 2px;
+}
+
+/* Active (click/press): quick "press down" effect */
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    background-color: #e8e8e8;
+}
+
+input {
+    width: 117px;
+    height: 83px;
+    border: 2px solid #B295FF;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 24.4px;
+    font-size: 58px;
+    /* Smooth transitions */
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.15s ease;
+    text-align: center;
+    color: #fff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Hover: subtle lift effect */
+input:hover {
+    border-color: #9b7dfd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(178, 149, 255, 0.2);
+}
+
+/* Focus: clear, accessible highlight */
+input:focus {
+    outline: none;
+    border-color: #7c5aff;
+    box-shadow: 0 0 0 4px rgba(124, 90, 255, 0.25);
+}
+
+section {
+    background-color: #F4F4F4;
+}
+
+article {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    align-items: center;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        button {
+            border: none;
+            border-radius: 200px;
+            padding: 15px 30px;
+            font-weight: bold;
+            cursor: pointer;
+            background: #fc807f;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="purchase-btn"></button>
+
+    <script>
+        // Challenge:
+        // Round the price in the button down to two decimal places.
+        // Don't know which method to use? Google it!
+
+        const totalPrice = 420.69235632455
+        const btn = document.getElementById("purchase-btn")
+        btn.textContent = `Buy €${Math.round(totalPrice)}`
+
+
+    </script>
+</body>
+
+</html>

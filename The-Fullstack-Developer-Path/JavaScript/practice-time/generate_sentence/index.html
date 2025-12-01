@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // The generateSentence(desc, arr) takes two parameterer: a description and an array.
+        // It should return a string based upon the description and array.
+
+        // Example 1: if you pass in "largest countries",and ["China", "India", "USA"],
+        // it should return the string: "The 3 largest countries are China, India, USA"
+
+        // Example 2:If you pass in "best fruits" and ["Apples", "Bananas"], it should return:
+        // "The 2 best fruits are Apples, Bananas"
+
+        // Use both a for loop and a template string to solve the challenge
+        function generateSentence(desc, arr) {
+            let sentence = `${desc} `;
+
+            for (let i = 0; i < arr.length; i++) {
+                if (i === arr.length - 1) {
+                    sentence += arr[i];             // last item → no comma
+                } else {
+                    sentence += arr[i] + ", ";      // add comma for others
+                }
+            }
+
+            return sentence;
+        }
+
+        const countries = ["China", "India", "USA"];
+        const fruits = ["Apples", "Bananas"];
+        console.log(generateSentence(`The ${countries.length} largest countries are`, countries));
+        console.log(generateSentence(`The ${fruits.length} best fruits are`, fruits));
+    </script>
+</body>
+
+</html>

@@ -4,45 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metric/Imperial Unit Conversion</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <title>Unit converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
-    <script src="theme.js" defer></script>
 </head>
 
 <body>
-    <div class="container">
+    <main>
         <header>
-            <section class="theme-toggle">
-                <h1>Metric/Imperial Unit Conversion</h1>
-                <div class="toggle">
-                    <button type="button" id="theme-toggle-btn" aria-label="Toggle dark mode">
-                        <span class="icon-sun">🌞</span>
-                        <span class="icon-moon">🌙</span>
-                    </button>
-                </div>
-
-            </section>
-            <section>
-                <input type="number" id="number" autofocus>
-                <button id="convert" type="button">Convert</button>
-            </section>
+            <h1>Metric/Imperial Unit Conversion</h1>
+            <input type="number" name="number" id="number" autofocus>
+            <button type="button">Convert</button>
         </header>
-        <main>
+        <section>
             <article>
                 <h2>Length (Meter/Feet)</h2>
                 <p></p>
             </article>
             <article>
-                <h2>Length (Meter/Feet)</h2>
+                <h2>Volume (Liters/Gallons)</h2>
                 <p></p>
             </article>
             <article>
                 <h2>Mass (Kilograms/Pounds)</h2>
                 <p></p>
             </article>
-        </main>
-    </div>
+        </section>
+    </main>
 </body>
 
 </html>

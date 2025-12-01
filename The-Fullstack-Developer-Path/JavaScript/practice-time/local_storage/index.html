@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
+        background: whitesmoke;
+        color: darkgreen;
+    }
+</style>
+
+<body>
+    <h2>Saving to localStorage</h2>
+    <script>
+        // Save a value to localStorage
+        // Delete your code and refresh the page
+        // Fetch your value from localStorage and log it out
+        localStorage.setItem("key", "value");
+        console.log(localStorage.getItem("key"));
+        localStorage.setItem("username", "Alice");
+        // Retrieve safely with fallback
+        const username = localStorage.getItem("username") || "No user found";
+        console.log(username);
+    </script>
+</body>
+
+</html>
