@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5;
+    margin-top: 5%;
+    margin-left: 35%;
+}
+
+form {
+    display: block;
+}
+
+input {
+    width: 515px;
+    font-size: 24px;
+    height: 50px;
+}
+
+input,button {
+    padding: 1rem;
+    border-radius: 2.5px;
+    outline: unset;
+    border: none;
+    border: 2px solid gray;
+}
+
+input,img {
+    margin-bottom: 15px;
+}
+
+button {
+    cursor: pointer;
+    width: 250px;
+}
+
+button:first-child {
+    margin-right: 15px;
+}
