@@ -24,4 +24,30 @@ button {
 
 button {
     margin-top: 25px;
+    background-color: #dfe1e5;
+    padding: 1rem;
+    font-size: 16px;
+    outline: unset;
+    border: unset;
+    cursor: pointer;
+    border-radius: 25px;
 }
+
+/*
+    Challenge:
+    Style the button according to the provided design.
+    Hint: Use padding, font-size, border-radius, border, and background
+    
+    PS: 
+    The real background is #f8f9fa but it is failing our contrast check. 
+    So here's the background color we will use: #dfe1e5
+    */
+
+    .btn-wrapper {
+        width: fit-content;
+        display: flex;
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
