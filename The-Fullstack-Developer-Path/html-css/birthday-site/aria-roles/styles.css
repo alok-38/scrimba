@@ -48,26 +48,36 @@ h1, h2, h3, h4, p {
     margin-top: 0;
 }
 
+#gift-img-cheers {
+    height: 200px;
+}
+
 .gift-img {
+    margin: 20px auto;
     width: 400px;
+    height: 400px;
     border: 6px solid white;
     border-radius: 10px;
-    background-image: url(images/gift-cover.jpg);
-    height: 400px;
-    margin: auto;
+    background-image: url("images/gift-cover.jpg");
     background-size: cover;
 }
 
-/*
-Challenge:
-"Fix" the "gift-img" <div> so that it looks 
-like the provided design again.
+#gift-img-happy:hover {
+    background-image: url("images/happy.gif");
+}
 
-It needs a height (should be a square), a
-background image, and to be centered again.
-*/
+#gift-img-hot:hover {
+    background-image: url("images/hot.gif");
+}
 
+#gift-img-genius:hover {
+    background-image: url("images/genius.gif");
+}
 
-.gift-img:hover {
-    background-position: center;
+#gift-img-badass:hover {
+    background-image: url("images/badass.gif");
+}
+
+#gift-img-cheers:hover {
+    background-image: url("images/cheers.gif");
 }
