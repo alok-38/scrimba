@@ -1,11 +1,15 @@
 body {
     text-align: center;
     font-family: 'Happy Monkey', cursive;
-    background: #a2d2ff;
+    background: linear-gradient(to bottom, #4facfe, #ff7eb3);
     color: #ffffff;
 }
 
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
     text-shadow: 0 0 1px black;
 }
 
@@ -80,4 +84,13 @@ h1, h2, h3, h4, p {
 
 #gift-img-cheers:hover {
     background-image: url("images/cheers.gif");
+}
+
+footer,
+footer a {
+    color: inherit;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: inherit;
+    padding: 2rem;
 }
