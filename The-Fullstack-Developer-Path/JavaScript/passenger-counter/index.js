@@ -1,20 +1,11 @@
-// document.getElementById("count").innerText = 5
+const incrementBtn = document.getElementById('increment-btn');
 
-let count = 0
+let countEl = document.getElementById('count');
 
-console.log(count)
+let initialCount = parseInt(countEl.textContent);
 
+const increment = () => {
+    countEl.textContent = ++initialCount;
+}
 
-// 1. Create a variable, myAge, and set its value to your age
-
-// 2. Log the myAge variable to the console
-let myAge = 41;
-console.log(myAge);
-
-// 1. Create two variables, myAge and humanDogRatio
-// 2. Multiply the two together and store the result in myDogAge 
-// 3. Log myDogAge to the console
-
-let humanDogRatio;
-let myDogAge = myAge * humanDogRatio;
-console.log(myDogAge);
+incrementBtn.addEventListener('click', increment);
