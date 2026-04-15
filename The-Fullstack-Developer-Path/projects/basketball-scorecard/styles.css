@@ -1,0 +1,25 @@
+main {
+  background-color: #1B244A;
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #EEEEEE;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+button {
+  font-family: "Cursed Timer ULiL", sans-serif;
+  font-family: inherit;
+  cursor: pointer;
+  border: unset;
+  outline: unset;
+  border: 2px solid #9AABD8;
+  background: transparent;
+  color: #9AABD8;
+  border-radius: 5px;
+  width: 45px;
+  height: 45px;
+  font-size: 18px;
+}
