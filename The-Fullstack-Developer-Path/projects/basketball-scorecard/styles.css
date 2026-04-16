@@ -1,12 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
 main {
-  background-color: #1B244A;
+  background-color: #1b244a;
+  display: flex;
+  height: 385px;
+  margin-top: 100px;
+  padding: 5rem;
 }
 
 p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #EEEEEE;
-  font-weight: 800;
+  color: #eeeeee;
+  font-weight: 900;
   font-size: 40px;
+  text-align: center;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 275px;
+}
+
+.led-wrapper {
+  background-color: #080001;
+  width: 155px;
+  height: 120px;
+  border-radius: 5px;
+}
+
+.led-wrapper div {
+  color: #F94F6D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Cursed Timer ULiL", sans-serif;
+  font-size: 90px;
+  width: 117px;
+  height: 140px;
+  margin: 0 auto;
+  padding-bottom: 0;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 button {
@@ -15,11 +64,18 @@ button {
   cursor: pointer;
   border: unset;
   outline: unset;
-  border: 2px solid #9AABD8;
+  border: 2px solid #9aabd8;
   background: transparent;
-  color: #9AABD8;
+  color: #9aabd8;
   border-radius: 5px;
   width: 45px;
   height: 45px;
   font-size: 18px;
+}
+
+.new-btn {
+  width: fit-content;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
 }

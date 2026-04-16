@@ -9,33 +9,36 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
   </head>
   <body>
     <main>
-      <article>
+      <article class="panel">
         <p>HOME</p>
         <div class="led-wrapper">
           <div id="home"></div>
         </div>
         <div class="btn-wrapper">
-          <button>+1</button>
-          <button>+2</button>
-          <button>+3</button>
+          <button id="home-plus1">+1</button>
+          <button id="home-plus2">+2</button>
+          <button id="home-plus3">+3</button>
         </div>
       </article>
-      <article>
+      <article class="panel-new">
+        <button class="new-btn">NEW GAME</button>
+      </article>
+      <article class="panel">
         <p>GUEST</p>
         <div class="led-wrapper">
           <div id="guest"></div>
         </div>
         <div class="btn-wrapper">
-          <button>+1</button>
-          <button>+2</button>
-          <button>+3</button>
+          <button id="guest-plus1">+1</button>
+          <button id="guest-plus2">+2</button>
+          <button id="guest-plus3">+3</button>
         </div>
       </article>
-      <article></article>
-      <article></article>
+      
     </main>
   </body>
 </html>
