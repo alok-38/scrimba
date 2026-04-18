@@ -1,0 +1,29 @@
+/* Complete the CSS styling according to the provided design */
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url(images/table.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: goldenrod;
+    font-size: 3.75rem;
+}
+
+p {
+    font-weight: 600;
+    font-size: 1.75rem;
+    color: #fff;
+}
+
+#message-el {
+    font-style: italic;   
+}
