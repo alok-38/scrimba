@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "CursedTimer";
+  src: url("./CursedTimerUlil-Aznm.ttf") format("truetype");
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "CursedTimer", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #1a1a1a, #000000);
+  color: white;
+}
