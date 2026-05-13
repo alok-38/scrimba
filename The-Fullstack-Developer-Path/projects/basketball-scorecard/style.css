@@ -14,5 +14,49 @@ body {
   font-family: "CursedTimer", sans-serif;
   min-height: 100vh;
   background: linear-gradient(to bottom, #1a1a1a, #000000);
-  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scoreboard {
+  display: flex;
+  background-color: #1b244a;
+  max-width: 575px;
+  width: 100%;
+  padding: 5rem;
+}
+
+.scoreboard__title {
+  color: #eeeeee;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.scoreboard__score {
+  background-color: #080001;
+  max-width: clamp(120px, 20vw, 155px);
+  height: 120px;
+  display: flex;
+  align-items: center;
+  color: #f94f6d;
+  justify-content: center;
+  font-size: 5.625rem;
+}
+
+.scoreboard__controls {
+  width: clamp(120px, 30vw, 155px);
+  display: flex;
+}
+
+.scoreboard__button {
+  cursor: pointer;
+  color: #9aabd8;
+  border-radius: 2px solid #9aabd8;
+  background: transparent;
+  border-radius: 5px;
+  height: 45px;
+  width: 45px;
+  font-family: inherit;
+  font-size: 1.125rem;
 }
