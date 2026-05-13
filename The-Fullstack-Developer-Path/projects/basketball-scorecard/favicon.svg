@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Basketball base -->
+  <circle cx="32" cy="32" r="30" fill="#f47c20" stroke="black" stroke-width="2"/>
+  
+  <!-- خطوط (lines) -->
+  <path d="M2 32h60" stroke="black" stroke-width="2"/>
+  <path d="M32 2c10 10 10 50 0 60" stroke="black" stroke-width="2" fill="none"/>
+  <path d="M32 2c-10 10 -10 50 0 60" stroke="black" stroke-width="2" fill="none"/>
+</svg>

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <title>Basketball Scorecard | Live Score Tracker</title>
 
@@ -42,104 +43,129 @@
   </head>
 
   <body>
-    <main id="scoreboard" class="scoreboard">
-      <div class="scoreboard__teams">
-        <!-- HOME TEAM -->
-        <section
-          id="home-team"
-          class="scoreboard__team scoreboard__team--home"
-          aria-labelledby="home-title"
+    <div class="wrapper">
+      <header class="scoreboard__header">
+        <h1 class="scoreboard__highlight" id="scoreboard-leader"></h1>
+        <div
+          class="scoreboard__score scoreboard__score--leader"
+          aria-live="polite"
+          aria-atomic="true"
         >
-          <h2 id="home-title" class="scoreboard__team-title">Home</h2>
-
-          <div class="scoreboard__score" aria-live="polite" aria-atomic="true">
-            <span id="home-score" class="scoreboard__score-value">0</span>
-          </div>
-
-          <div
-            id="home-controls"
-            class="scoreboard__controls"
-            role="group"
-            aria-label="Home score controls"
+          <span id="leader-score" class="scoreboard__score-value">0</span>
+        </div>
+      </header>
+      <main id="scoreboard" class="scoreboard">
+        <div class="scoreboard__teams">
+          <!-- HOME TEAM -->
+          <section
+            id="home-team"
+            class="scoreboard__team scoreboard__team--home"
+            aria-labelledby="home-title"
           >
-            <button
-              id="home-add-1"
-              class="scoreboard__button"
-              data-team="home"
-              data-points="1"
-              aria-label="Add 1 point to home score"
+            <h2 id="home-title" class="scoreboard__team-title">Home</h2>
+            <div
+              class="scoreboard__score"
+              aria-live="polite"
+              aria-atomic="true"
             >
-              +1
-            </button>
-            <button
-              id="home-add-2"
-              class="scoreboard__button"
-              data-team="home"
-              data-points="2"
-              aria-label="Add 2 points to home score"
+              <span id="home-score" class="scoreboard__score-value">0</span>
+            </div>
+            <div
+              id="home-controls"
+              class="scoreboard__controls"
+              role="group"
+              aria-label="Home score controls"
             >
-              +2
-            </button>
-            <button
-              id="home-add-3"
-              class="scoreboard__button"
-              data-team="home"
-              data-points="3"
-              aria-label="Add 3 points to home score"
-            >
-              +3
-            </button>
-          </div>
-        </section>
-
-        <!-- GUEST TEAM -->
-        <section
-          id="guest-team"
-          class="scoreboard__team scoreboard__team--guest"
-          aria-labelledby="guest-title"
-        >
-          <h2 id="guest-title" class="scoreboard__team-title">Guest</h2>
-
-          <div class="scoreboard__score" aria-live="polite" aria-atomic="true">
-            <span id="guest-score" class="scoreboard__score-value">0</span>
-          </div>
-
-          <div
-            id="guest-controls"
-            class="scoreboard__controls"
-            role="group"
-            aria-label="Guest score controls"
+              <button
+                id="home-add-1"
+                class="scoreboard__button"
+                data-team="home"
+                data-points="1"
+                aria-label="Add 1 point to home score"
+              >
+                +1
+              </button>
+              <button
+                id="home-add-2"
+                class="scoreboard__button"
+                data-team="home"
+                data-points="2"
+                aria-label="Add 2 points to home score"
+              >
+                +2
+              </button>
+              <button
+                id="home-add-3"
+                class="scoreboard__button"
+                data-team="home"
+                data-points="3"
+                aria-label="Add 3 points to home score"
+              >
+                +3
+              </button>
+            </div>
+          </section>
+          <!-- GUEST TEAM -->
+          <section
+            id="guest-team"
+            class="scoreboard__team scoreboard__team--guest"
+            aria-labelledby="guest-title"
           >
-            <button
-              id="guest-add-1"
-              class="scoreboard__button"
-              data-team="guest"
-              data-points="1"
-              aria-label="Add 1 point to guest score"
+            <h2 id="guest-title" class="scoreboard__team-title">Guest</h2>
+            <div
+              class="scoreboard__score"
+              aria-live="polite"
+              aria-atomic="true"
             >
-              +1
-            </button>
-            <button
-              id="guest-add-2"
-              class="scoreboard__button"
-              data-team="guest"
-              data-points="2"
-              aria-label="Add 2 points to guest score"
+              <span id="guest-score" class="scoreboard__score-value">0</span>
+            </div>
+            <div
+              id="guest-controls"
+              class="scoreboard__controls"
+              role="group"
+              aria-label="Guest score controls"
             >
-              +2
-            </button>
+              <button
+                id="guest-add-1"
+                class="scoreboard__button"
+                data-team="guest"
+                data-points="1"
+                aria-label="Add 1 point to guest score"
+              >
+                +1
+              </button>
+              <button
+                id="guest-add-2"
+                class="scoreboard__button"
+                data-team="guest"
+                data-points="2"
+                aria-label="Add 2 points to guest score"
+              >
+                +2
+              </button>
+              <button
+                id="guest-add-3"
+                class="scoreboard__button"
+                data-team="guest"
+                data-points="3"
+                aria-label="Add 3 points to guest score"
+              >
+                +3
+              </button>
+            </div>
+          </section>
+          <!-- NEW GAME -->
+          <section id="game-controls" class="scoreboard__game-controls">
             <button
-              id="guest-add-3"
-              class="scoreboard__button"
-              data-team="guest"
-              data-points="3"
-              aria-label="Add 3 points to guest score"
+              id="new-game"
+              class="scoreboard__button scoreboard__button--reset"
+              aria-label="Start a new game and reset scores"
             >
-              +3
+              New Game
             </button>
-          </div>
-        </section>
-      </div>
-    </main>
+          </section>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
