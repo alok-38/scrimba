@@ -1,24 +1,25 @@
-const incrementBtn = document.getElementById("increment-btn");
+const h2El = document.getElementById('count-el');
+const incrementBtn = document.getElementById('increment-btn');
+const saveBtn = document.getElementById('save-btn');
+const entriesEl = document.getElementById('save-el');
 
-let countEl = document.getElementById("count-el");
 
-let initialCount = parseInt(countEl.textContent);
+const incrementCount = () => {
 
-const increment = () => {
-  countEl.textContent = ++initialCount;
-};
+}
 
-incrementBtn.addEventListener("click", increment);
+const decrementCount = () => {
 
-const saveBtn = document.getElementById("save-btn");
+}
 
-let saveEl = document.getElementById("save-el");
+const updateCount = () => {
 
-const save = () => {
-  let countAndDash = initialCount + " - ";
-  saveEl.innerText += "" + countAndDash;
-  initialCount = 0;
-  countEl.textContent = initialCount;
-};
+}
 
-saveBtn.addEventListener("click", save);
+incrementBtn.addEventListener('click', () => {
+    incrementCount
+});
+
+saveBtn.addEventListener('click', () => {
+    
+})
