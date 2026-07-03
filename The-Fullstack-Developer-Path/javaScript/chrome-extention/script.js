@@ -1,10 +1,15 @@
-// Refactor the code so that it uses .addEventListener()
-// when you click the SAVE INPUT button
+// Create two variables:
+// myLeads -> should be assigned to an empty array
+// inputEl -> should be assigned to the text input field
+let myLeads = [];
+const inputEl = document.getElementById("input-el");
+const inputBtn = document.getElementById("input-btn");
+
+// Push the value "www.awesomelead.com" to myArray when the input button is clicked
 
 const saveLead = () => {
-  console.log("Button clicked!");
+  myLeads.push("www.myawesomelead.com");
+  console.log(myLeads);
 };
 
-const inputBtn = document.getElementById('input-btn');
-
-inputBtn.addEventListener('click', saveLead);
+inputBtn.addEventListener("click", saveLead);
