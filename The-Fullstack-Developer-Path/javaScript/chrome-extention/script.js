@@ -5,7 +5,7 @@ let myLeads = [];
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
 const errorEl = document.getElementById("error-el");
-
+const ulEl = document.getElementById('ul-el');
 
 const saveLead = () => {
   const inputValue = inputEl.value.trim();
@@ -18,10 +18,14 @@ const saveLead = () => {
 
   myLeads.push(inputValue);
 
+  ulEl.innerHTML = ""; // clear list first
+
   // Log out the items in the myLeads array using a for loop
   for (let index = 0; index < myLeads.length; index++) {
     const leads = myLeads[index];
-    console.log(leads);
+    const liEl = document.createElement('li');
+    liEl.textContent = leads;
+    ulEl.appendChild(liEl);
   }
 
   inputEl.value = "";
