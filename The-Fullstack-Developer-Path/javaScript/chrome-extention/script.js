@@ -4,12 +4,28 @@
 let myLeads = [];
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
+const errorEl = document.getElementById("error-el");
 
-// Push the value "www.awesomelead.com" to myArray when the input button is clicked
 
 const saveLead = () => {
-  myLeads.push("www.myawesomelead.com");
-  console.log(myLeads);
+  const inputValue = inputEl.value.trim();
+
+  if (inputValue === "") {
+    errorEl.textContent = "Leads cannot be empty!";
+    errorEl.style.color = "red";
+    return;
+  }
+
+  myLeads.push(inputValue);
+
+  // Log out the items in the myLeads array using a for loop
+  for (let index = 0; index < myLeads.length; index++) {
+    const leads = myLeads[index];
+    console.log(leads);
+  }
+
+  inputEl.value = "";
+  errorEl.textContent = "";
 };
 
 inputBtn.addEventListener("click", saveLead);
