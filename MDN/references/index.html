@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Getting references to elements on the page</title>
+  </head>
+  <body>
+    <h1 id="title">Hello World</h1>
+    <button id="btn">Click me</button>
+    <script>
+      const titleEl = document.getElementById("title");
+      const buttonEl = document.getElementById("btn");
+      buttonEl.addEventListener("click", () => {
+        titleEl.textContent =
+          titleEl.textContent === "Hello World"
+            ? "Goodbye World"
+            : "Hello World";
+      });
+    </script>
+  </body>
+</html>
