@@ -1,0 +1,16 @@
+{
+  "name": "rsbuild-project",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "rsbuild build",
+    "dev": "rsbuild --open",
+    "format": "prettier --write .",
+    "preview": "rsbuild preview"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^2.1.4",
+    "prettier": "^3.8.3"
+  }
+}
