@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The verbosity of DOM changes</title>
+    <script src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <main>
+      <h1 class="text-3xl font-bold mb-4">TodoMatic</h1>
+      <h2 class="text-xl italic mb-4">What needs to be done?</h2>
+      <div>
+        <input
+          placeholder="Enter your task"
+          class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4"
+          type="text"
+        />
+        <button
+          class="bg-blue-500 text-white py-2 px-4 rounded active:scale-95 transition transform duration-100 cursor-pointer"
+        >
+          Add
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
