@@ -4,6 +4,21 @@
   box-sizing: border-box;
 }
 
+body {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  padding: 1.5rem;
+}
+
+section,
+header,
+footer {
+  padding: 1rem;
+}
+
+section {
+  border: 1px solid gray;
+}
+
 a {
   color: #0a66c2;
   text-decoration: underline;
@@ -40,10 +55,6 @@ nav ul {
 
 ul {
   list-style-type: none;
-}
-
-body {
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
 }
 
 main {
