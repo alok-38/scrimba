@@ -5,7 +5,37 @@
 }
 
 a {
-  text-decoration: none;
+  color: #0a66c2;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+  transition:
+    color 0.2s ease,
+    text-decoration-thickness 0.2s ease;
+}
+
+a:visited {
+  color: #6b4bbd;
+}
+
+a:hover,
+a:focus-visible {
+  color: #004182;
+  text-decoration-thickness: 3px;
+}
+
+a:active {
+  color: #002f5b;
+}
+
+a:focus-visible {
+  outline: 3px solid #ff9800;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+nav ul {
+  display: flex;
 }
 
 ul {
