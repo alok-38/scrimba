@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to events</title>
+  </head>
+  <body>
+    <button>Change color</button>
+    <script>
+      const buttonEl = document.querySelector("button");
+      function randomNumber(number) {
+        return Math.floor(Math.random() * number);
+      }
+      buttonEl.addEventListener("click", () => {
+        const randomColor = `rgb(${randomNumber(255)} ${randomNumber(255)} ${randomNumber(255)})`;
+        document.body.style.backgroundColor = randomColor;
+      });
+    </script>
+  </body>
+</html>
