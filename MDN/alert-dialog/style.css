@@ -1,0 +1,5 @@
+body.blur-active {
+  backdrop-filter: blur(8px);
+  background: rgba(113, 110, 110, 0.2);
+}
+
