@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basketball Scorecard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <main class="scoreboard" id="scoreboard">
+      <h1 class="scoreboard__title" id="scoreboard-title">
+        Basketball Scorecard
+      </h1>
+
+      <!-- Home Team -->
+      <section class="scoreboard__team scoreboard__team--home" id="home-team">
+        <h2 class="scoreboard__team-name" id="home-team-name">HOME</h2>
+
+        <div class="scoreboard__score-container">
+          <div class="scoreboard__score" id="home-score">0</div>
+        </div>
+
+        <div class="scoreboard__button-group" id="home-button-group">
+          <button class="scoreboard__button" id="home-add-1">+ 1</button>
+          <button class="scoreboard__button" id="home-add-2">+ 2</button>
+          <button class="scoreboard__button" id="home-add-3">+ 3</button>
+        </div>
+      </section>
+
+      <!-- Guest Team -->
+      <section class="scoreboard__team scoreboard__team--guest" id="guest-team">
+        <h2 class="scoreboard__team-name" id="guest-team-name">GUEST</h2>
+
+        <div class="scoreboard__score-container">
+          <div class="scoreboard__score" id="guest-score">0</div>
+        </div>
+
+        <div class="scoreboard__button-group" id="guest-button-group">
+          <button class="scoreboard__button" id="guest-add-1">+ 1</button>
+          <button class="scoreboard__button" id="guest-add-2">+ 2</button>
+          <button class="scoreboard__button" id="guest-add-3">+ 3</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
