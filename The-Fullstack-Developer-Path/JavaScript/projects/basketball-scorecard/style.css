@@ -20,5 +20,41 @@ h2,
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* body */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* main */
+.scoreboard {
+  max-width: 575px;
+  width: 100%;
+  display: flex;
+  background-color: #1b244a;
+}
+
+.scoreboard__team-name {
+  color: #eeeeee;
+}
+
+.scoreboard__score {
+  color: #f94f6d;
 }
