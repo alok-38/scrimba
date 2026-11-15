@@ -5,18 +5,29 @@
   font-style: normal;
 }
 
-/* Apply the font to elements */
-body,
-h1,
-h2,
-.score {
-  font-family: "CursedTimerUlil-Aznm", sans-serif;
+/* Design tokens: every repeated value lives here once */
+:root {
+  --color-board: #1b244a;
+  --color-text: #eeeeee;
+  --color-score: #f94f6d;
+  --color-button: #9aabd8;
+  --font-display: "CursedTimerUlil-Aznm", sans-serif;
+  --font-label: Verdana, Geneva, Tahoma, sans-serif;
+  --radius: 5px;
+  --gap: 1rem;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Apply the font to elements */
+body,
+h1,
+.scoreboard__score {
+  font-family: var(--font-display);
 }
 
 button {
@@ -48,13 +59,60 @@ body {
   max-width: 575px;
   width: 100%;
   display: flex;
-  background-color: #1b244a;
+  justify-content: space-around;
+  background-color: var(--color-board);
+  padding: 5rem;
 }
 
+/* Shared column layout: section, score box and button row all stack/space the same way */
+.scoreboard__team,
+.scoreboard__score-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.scoreboard__button-group {
+  display: flex;
+  gap: calc(var(--gap) / 2);
+}
+
+/* h2 */
 .scoreboard__team-name {
-  color: #eeeeee;
+  font-family: var(--font-label);
+  font-size: 2.75rem;
+  color: var(--color-text);
 }
 
+/* Score display */
 .scoreboard__score {
-  color: #f94f6d;
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--color-score);
+}
+
+.scoreboard__score-container {
+  min-width: 7rem;
+  padding: var(--gap);
+  background-color: rgb(0 0 0 / 0.5);
+  border-radius: var(--radius);
+}
+
+/* Buttons */
+.scoreboard__button {
+  width: 45px;
+  height: 45px;
+  border-radius: var(--radius);
+  border: 2px solid var(--color-button);
+  background: transparent;
+  font-family: inherit;
+  font-size: 2rem;
+  color: var(--color-button);
+}
+
+.scoreboard__button:hover,
+.scoreboard__button:focus-visible {
+  background-color: var(--color-button);
+  color: var(--color-board);
 }
