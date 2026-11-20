@@ -1,0 +1,56 @@
+.card {
+    width: 100%;
+    max-width: 400px;   /* was a fixed width, which overflows on small phones */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 16px;
+    text-align: center;
+    background: #ddebf8;
+    color: #2b2839;
+    border-bottom: 6px solid #d8cefe;
+}
+
+.avatar {
+    width: 120px;
+    max-width: 35%;
+    height: auto;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.actions button {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    color: #2b2839;
+    background: #fff;
+    border: 1px solid #d8cefe;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.actions button:hover,
+.actions button:focus-visible {
+    background: #d8cefe;
+}
+
+.actions svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;   /* icon follows the button's text color */
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
