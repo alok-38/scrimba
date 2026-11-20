@@ -1,0 +1,109 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #ffffff;
+}
+
+body {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(8, 15, 30, 0.88) 0%,
+      rgba(8, 15, 30, 0.65) 50%,
+      rgba(8, 15, 30, 0.25) 100%
+    ),
+    url("img/faded-office.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  padding: 5rem;
+  max-width: 650px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.15;
+  letter-spacing: -2px;
+  color: #ffffff;
+}
+
+p {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.7;
+  color: #d1d5db;
+}
+
+span {
+  color: #38bdf8;
+  font-weight: 700;
+  border-bottom: 3px solid #38bdf8;
+  padding-bottom: 2px;
+}
+
+button {
+  padding: 1rem 1.75rem;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-family: inherit;
+  width: 170px;
+  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.3);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(14, 165, 233, 0.45);
+  background: linear-gradient(135deg, #38bdf8, #3b82f6);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+button:focus-visible {
+  outline: 3px solid #7dd3fc;
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  h1 {
+    letter-spacing: -1px;
+  }
+}
