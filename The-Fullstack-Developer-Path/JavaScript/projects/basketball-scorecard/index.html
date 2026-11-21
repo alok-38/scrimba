@@ -1,48 +1,121 @@
+
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basketball Scorecard</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="app.js" defer></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1b244a" />
+  <meta name="description" content="A simple interactive basketball scoreboard." />
 
-  <body>
-    <main class="scoreboard" id="scoreboard">
-      <h1 class="sr-only" id="scoreboard-title">
-        Basketball Scorecard
-      </h1>
+  <title>Basketball Scoreboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <main class="scoreboard" id="scoreboard">
+    <header class="scoreboard__header">
+      <p class="scoreboard__eyebrow">LIVE GAME</p>
+      <h1>BASKETBALL SCOREBOARD</h1>
+      <p class="scoreboard__subtitle">Keep track of every point.</p>
+    </header>
+
+    <div class="scoreboard__teams">
 
       <!-- Home Team -->
-      <section class="scoreboard__team scoreboard__team--home" id="home-team">
-        <h2 class="scoreboard__team-name" id="home-team-name">HOME</h2>
+      <section class="team" aria-labelledby="home-team-name">
+        <label class="team__name-label" for="home-team-name">
+          HOME TEAM
+        </label>
 
-        <div class="scoreboard__score-container">
-          <div class="scoreboard__score" id="home-score">0</div>
+        <input
+          class="team__name"
+          id="home-team-name"
+          type="text"
+          value="HOME"
+          maxlength="20"
+          aria-label="Home team name"
+        />
+
+        <div class="score-container">
+          <output
+            class="score"
+            id="home-score"
+            aria-label="Home team score"
+            aria-live="polite"
+            aria-atomic="true"
+          >0</output>
         </div>
 
-        <div class="scoreboard__button-group" id="home-button-group">
-          <button class="scoreboard__button" id="home-add-1">+ 1</button>
-          <button class="scoreboard__button" id="home-add-2">+ 2</button>
-          <button class="scoreboard__button" id="home-add-3">+ 3</button>
+        <div class="team__controls">
+          <button type="button" class="score-button" data-team="home" data-points="1">
+            +1
+          </button>
+          <button type="button" class="score-button" data-team="home" data-points="2">
+            +2
+          </button>
+          <button type="button" class="score-button" data-team="home" data-points="3">
+            +3
+          </button>
         </div>
+
+        <button type="button" class="undo-button" data-team="home">
+          − 1 POINT
+        </button>
       </section>
 
       <!-- Guest Team -->
-      <section class="scoreboard__team scoreboard__team--guest" id="guest-team">
-        <h2 class="scoreboard__team-name" id="guest-team-name">GUEST</h2>
+      <section class="team" aria-labelledby="guest-team-name">
+        <label class="team__name-label" for="guest-team-name">
+          AWAY TEAM
+        </label>
 
-        <div class="scoreboard__score-container">
-          <div class="scoreboard__score" id="guest-score">0</div>
+        <input
+          class="team__name"
+          id="guest-team-name"
+          type="text"
+          value="GUEST"
+          maxlength="20"
+          aria-label="Away team name"
+        />
+
+        <div class="score-container">
+          <output
+            class="score"
+            id="guest-score"
+            aria-label="Away team score"
+            aria-live="polite"
+            aria-atomic="true"
+          >0</output>
         </div>
 
-        <div class="scoreboard__button-group" id="guest-button-group">
-          <button class="scoreboard__button" id="guest-add-1">+ 1</button>
-          <button class="scoreboard__button" id="guest-add-2">+ 2</button>
-          <button class="scoreboard__button" id="guest-add-3">+ 3</button>
+        <div class="team__controls">
+          <button type="button" class="score-button" data-team="guest" data-points="1">
+            +1
+          </button>
+          <button type="button" class="score-button" data-team="guest" data-points="2">
+            +2
+          </button>
+          <button type="button" class="score-button" data-team="guest" data-points="3">
+            +3
+          </button>
         </div>
+
+        <button type="button" class="undo-button" data-team="guest">
+          − 1 POINT
+        </button>
       </section>
-    </main>
-  </body>
+    </div>
+
+    <footer class="scoreboard__footer">
+      <p id="game-status" role="status" aria-live="polite">
+        Game ready
+      </p>
+
+      <button type="button" id="reset-button" class="reset-button">
+        ↻ NEW GAME
+      </button>
+    </footer>
+  </main>
+</body>
 </html>
